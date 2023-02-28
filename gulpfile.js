@@ -12,6 +12,8 @@ const uglify = require('gulp-uglify-es').default;
 const sass = require("gulp-sass")(require('sass'));
 const autoprefixer = require("gulp-autoprefixer");
 const cleanCSS = require('gulp-clean-css');
+const plumber = require("gulp-plumber");
+const sourcemap = require("gulp-sourcemaps");
 //const imagemin = require("gulp-imagemin");
 //import gulp-imagemin from "gulp-imagemin";
 
@@ -25,6 +27,7 @@ browserSync.init({
 
 function scripts(){
     return src('app/js/*.js')
+    .pipe(plumber())
     .pipe(concat('app.min.js'))
     .pipe(uglify())
     .pipe(dest('app/js/'))
@@ -59,9 +62,11 @@ function startwatch(){
 
 function styles(){
     return src("app/sass/blocks/*.scss")
+    .pipe(plumber())
+    .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(concat('app.min.css'))
-    .pipe(cleanCSS( { level: { 1: { specialComments: 0 } }/* , format: 'beautify' */ } ))
+    .pipe(cleanCSS( { level: { 1: { specialComments: 0 } }, format: 'beautify' } ))
     .pipe(autoprefixer({overrideBrowserslist:["last 10 versions"], grid:true}))
     .pipe(dest("app/css/"))
     .pipe(browserSync.stream())
