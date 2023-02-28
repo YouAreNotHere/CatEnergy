@@ -1,5 +1,19 @@
+@font-face {
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: normal;
+    src: local(oswaldmedium),
+    url("/app/fonts/oswaldregular.woff2") format(woff2),
+    url("/app/fonts/oswaldregular.woff") format(woff);
+}
+
 body{
     min-width: 320px;
+    font-family: "Oswald", "Arial", sans-serif;
+    margin:0;
+    padding: 0;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
 }
 img{
     max-width: 100%;
@@ -8,6 +22,22 @@ img{
 a{
     text-decoration: none;
 }
+ul{
+    margin: 0;
+    padding: 0;
+}
 li{
     list-style: none;
+}
+.visually-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip:rect(0 0 0 0);
+    overflow: hidden;
 }
