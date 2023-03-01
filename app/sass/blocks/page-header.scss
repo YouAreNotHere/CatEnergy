@@ -1,7 +1,22 @@
 .page-header{
-    display: flex;
-    &__logo{
-        width: 191px;
-        height: 37,61px;
+    width: 100%;
+    flex-wrap: wrap;
+    height: 66px;
+    &__container{
+        display: flex;
+        flex-grow: 1;
+        width: 88%;
+        margin:0 auto;
+        align-items: center;
+        justify-content: space-around;
+    }
+    @media (min-width: @tablet-width){
+        display: flex;
+        height: 140px;
+        
+    }
+    @media (min-width:@desktop){
+        display: flex;
+        height: 143px;  
     }
 }

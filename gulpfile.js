@@ -14,6 +14,8 @@ const autoprefixer = require("gulp-autoprefixer");
 const cleanCSS = require('gulp-clean-css');
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
+//const runsequence = require("run-sequence");
+//const gwatch = require("gulp-watch");
 //const imagemin = require("gulp-imagemin");
 //import gulp-imagemin from "gulp-imagemin";
 
@@ -64,7 +66,7 @@ function styles(){
     return src("app/sass/blocks/*.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
-    .pipe(sass())
+    .pipe(sass().on('error', sass.logError))
     .pipe(concat('app.min.css'))
     .pipe(cleanCSS( { level: { 1: { specialComments: 0 } }, format: 'beautify' } ))
     .pipe(autoprefixer({overrideBrowserslist:["last 10 versions"], grid:true}))
