@@ -7,6 +7,19 @@
     url("/app/fonts/oswaldregular.woff") format(woff);
 }
 
+@tablet-width: 768px;
+@desktop-width: 1200px;
+@mobile-width-only: 767px;
+
+@darkgreen: #5EAA2F;
+@lightgreen: #68B738;
+@grey: #F2F2F2;
+@pink: #FF8282;
+@darkpink: #D24899;
+
+.page{
+    height: 100%;
+}
 body{
     min-width: 320px;
     font-family: "Oswald", "Arial", sans-serif;
@@ -14,6 +27,7 @@ body{
     padding: 0;
     background-repeat: no-repeat;
     box-sizing: border-box;
+    width: 100%;
 }
 img{
     max-width: 100%;
