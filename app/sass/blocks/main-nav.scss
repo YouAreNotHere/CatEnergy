@@ -1,9 +1,14 @@
+$tablet-width: 768px;
+$desktop-width: 1440px;
+$mobile-width-only: 767px;
 .main-nav{
     margin-top: 40px;
     flex-direction: column;
     text-align: center;
     justify-content: space-between;
-
+    @media (max-width:$mobile-width-only) {
+        display: none;
+    }
 }
 .main-nav__list{
     display:flex;
