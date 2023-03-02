@@ -1,22 +1,43 @@
+
+$tablet-width: 768px;
+$desktop-width: 1400px;
+$mobile-width-only: 767px;
+
+$darkgreen: #5EAA2F;
+$lightgreen: #68B738;
+$grey: #F2F2F2;
+$pink: #FF8282;
+$darkpink: #D24899;
 .page-header{
-    width: 100%;
     flex-wrap: wrap;
     height: 66px;
     &__container{
         display: flex;
         flex-grow: 1;
-        width: 88%;
+        width: 280px;
         margin:0 auto;
         align-items: center;
         justify-content: space-around;
+        @media (min-width: $tablet-width){
+            display: flex;
+            width: 708px;
+        }
+        @media (min-width: $desktop-width){
+            display: flex;
+        }
     }
-    @media (min-width: @tablet-width){
+    }
+    @media (min-width: $tablet-width){
         display: flex;
-        height: 140px;
-        
+        height: 140px;   
     }
-    @media (min-width:@desktop){
+    @media (min-width: $desktop-width){
         display: flex;
         height: 143px;  
     }
+}
+// .page-header__container a{
+   // @media (min-width: $tablet-width and $desktop-width){
+    //    display: none;
+   // }
 }
