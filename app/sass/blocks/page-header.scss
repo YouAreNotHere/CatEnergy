@@ -8,25 +8,14 @@ $lightgreen: #68B738;
 $grey: #F2F2F2;
 $pink: #FF8282;
 $darkpink: #D24899;
+
 .page-header{
+    display: flex;
     flex-wrap: wrap;
     height: 66px;
-    &__container{
-        display: flex;
-        flex-grow: 1;
-        width: 280px;
-        margin:0 auto;
-        align-items: center;
-        justify-content: space-around;
-        @media (min-width: $tablet-width){
-            display: flex;
-            width: 708px;
-        }
-        @media (min-width: $desktop-width){
-            display: flex;
-        }
-    }
-    }
+    margin:0 auto;
+    justify-content: center;
+    
     @media (min-width: $tablet-width){
         display: flex;
         height: 140px;   
@@ -40,4 +29,23 @@ $darkpink: #D24899;
    // @media (min-width: $tablet-width and $desktop-width){
     //    display: none;
    // }
+
+.page-header__container{
+    display: flex;
+    width: 280px;
+    align-items: center;
+    justify-content: space-around;
+        
+        @media (min-width: $tablet-width){
+            display: flex;
+            width: 175px;
+            height: 52px;
+            margin-top: 24px;
+        }
+        @media (min-width: $desktop-width){
+            display: flex;
+            width: 202px;
+            height: 59px;
+            margin-top: 53px;
+        }
 }
