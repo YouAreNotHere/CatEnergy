@@ -7,15 +7,16 @@ $mobile-width-only: 767px;
     text-align: center;
     justify-content: space-between;
     font-family: oswald;
+    font-style: normal;
     text-transform: uppercase;
     font-weight: 400;
+    display: flex;
     
     @media (max-width:$mobile-width-only) {
         display: none;
     }
     
     @media (min-width: $tablet-width){
-        display: flex;
         height: 36px;
         width: 440px;
         font-size: 18px;
@@ -23,7 +24,6 @@ $mobile-width-only: 767px;
         margin-left: 95px;
     }
     @media (min-width: $desktop-width){
-        display: flex;
         height: 40px;
         width: 478px;
         font-size: 20px;
@@ -71,7 +71,17 @@ a{
         color: white;
 }
 }
+
+.site-list__item a :nth-child(3){
     
+    @media (min-width: $tablet-width){
+         color: green;
+ }
+    @media (min-width: $desktop-width){
+         color: white;
+ }
+ }
+
 .main-nav__toggle{
     
         @media (min-width: $tablet-width){
