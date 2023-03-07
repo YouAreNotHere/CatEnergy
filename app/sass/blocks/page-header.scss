@@ -49,3 +49,10 @@ $darkpink: #D24899;
             margin-top: 53px;
         }
 }
+
+.main-nav__list :nth-child(3) a{
+    background-color:green;
+    width: 153px;
+    height: 24px;
+    display: flex;
+}

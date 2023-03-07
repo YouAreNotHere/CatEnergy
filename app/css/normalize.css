@@ -21,10 +21,6 @@
    * `article` contexts in Chrome, Edge, Firefox, and Safari.
    */
   
-  h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
-  }
   
   /* Grouping content
    * ========================================================================== */
@@ -65,13 +61,6 @@
     overflow: visible; /* 3 */
   }
   
-  /**
-   * Add the correct display in IE.
-   */
-  
-  main {
-    display: block;
-  }
   
   /**
    * 1. Correct the inheritance and scaling of font size in all browsers.
