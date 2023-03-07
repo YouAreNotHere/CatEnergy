@@ -1,10 +1,8 @@
 .main-nav {
-  margin-top: 42px;
   text-align: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-family: oswald;
   font-style: normal;
   text-transform: uppercase;
   font-weight: 400;
@@ -23,7 +21,8 @@
     width: 440px;
     font-size: 18px;
     line-height: 24px;
-    margin-left: 95px
+    margin-left: 95px;
+    margin-top: 42px
   }
 }
 @media (min-width:1440px) {
@@ -31,8 +30,9 @@
     height: 40px;
     width: 478px;
     font-size: 20px;
-    line-height: auto;
-    background-color: green
+    background-color: green;
+    margin-left: 540px;
+    margin-top: 71px
   }
 }
 .main-nav__wrapper {
@@ -86,16 +86,6 @@
   }
 }
 @media (min-width:768px) {
-  .site-list__item a {
-    color: green
-  }
-}
-@media (min-width:1440px) {
-  .site-list__item a {
-    color: #fff
-  }
-}
-@media (min-width:768px) {
   .main-nav__toggle {
     display: none
   }
@@ -109,7 +99,7 @@
   font-family: Oswald;
   font-style: normal;
   font-weight: 400;
-  src: local(oswaldmedium),url(/app/fonts/oswaldregular.woff2) format(woff2),url(/app/fonts/oswaldregular.woff) format(woff)
+  src: local(oswaldmedium),url(../../fonts/oswaldregular.woff2) format("woff2"),url(../../fonts/oswaldregular.woff) format("woff")
 }
 .page {
   height: 100%;
@@ -125,7 +115,7 @@
 }
 @media (min-width:1440px) {
   .page {
-    width: 1200px
+    width: 1440px
   }
 }
 body {
@@ -171,11 +161,19 @@ li {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  height: 66px;
   margin: 0 auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start
+}
+@media (max-width:767px) {
+  .page-header {
+    margin-top: 11px;
+    height: 37px
+  }
 }
 @media (min-width:768px) {
   .page-header {
@@ -224,14 +222,44 @@ li {
     margin-top: 53px
   }
 }
-.main-nav__list :nth-child(3) a {
-  background-color: green;
+.cart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: auto;
-  height: auto;
-  color: #fff;
-  padding: 0;
-  font-weight: 400
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start
+}
+@media (max-width:767px) {
+  .cart {
+    margin-top: 11px;
+    height: 480px;
+    width: 100%;
+    background-color: green;
+    color: #fff
+  }
+}
+@media (min-width:768px) {
+  .cart {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 810px;
+    width: 708px
+  }
+}
+@media (min-width:1440px) {
+  .cart {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 553px;
+    width: 1220px
+  }
 }
