@@ -3,10 +3,8 @@ $desktop-width: 1440px;
 $mobile-width-only: 767px;
 
 .main-nav{
-    margin-top: 42px;
     text-align: center;
     justify-content: space-between;
-    font-family: oswald;
     font-style: normal;
     text-transform: uppercase;
     font-weight: 400;
@@ -21,14 +19,17 @@ $mobile-width-only: 767px;
         width: 440px;
         font-size: 18px;
         line-height: 24px;
+        
         margin-left: 95px;
+        margin-top: 42px;
     }
     @media (min-width: $desktop-width){
         height: 40px;
         width: 478px;
         font-size: 20px;
-        line-height: auto;
         background-color: green;
+        margin-left: 540px;
+        margin-top: 71px;
     }
 }
 
@@ -72,15 +73,6 @@ a{
 }
 }
 
-.site-list__item a{
-    
-    @media (min-width: $tablet-width){
-         color: green;
- }
-    @media (min-width: $desktop-width){
-         color: white;
- }
- }
 
 .main-nav__toggle{
     

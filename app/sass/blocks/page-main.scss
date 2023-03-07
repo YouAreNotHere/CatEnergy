@@ -1,6 +1,30 @@
 $tablet-width: 768px;
 $desktop-width: 1440px;
 $mobile-width-only: 767px;
-.main-page{
 
+.cart{
+    display: flex;
+    flex-wrap: wrap;
+    margin:0 auto;
+    justify-content: center;
+    align-items: flex-start;
+    
+    @media (max-width: $mobile-width-only){
+        margin-top: 11px;
+        height: 480px;
+        width: 100%;
+        background-color: green;
+        color: white
+    }
+    
+    @media (min-width: $tablet-width){
+        display: flex;
+        height: 810px;
+        width: 708px;
+    }
+    @media (min-width: $desktop-width){
+        display: flex;
+        height: 553px;
+        width: 1220px;
+    }
 }

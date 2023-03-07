@@ -3,8 +3,8 @@
     font-style: normal;
     font-weight: normal;
     src: local(oswaldmedium),
-    url("/app/fonts/oswaldregular.woff2") format(woff2),
-    url("/app/fonts/oswaldregular.woff") format(woff);
+    url("../../fonts/oswaldregular.woff2") format("woff2"),
+    url("../../fonts/oswaldregular.woff") format("woff");
 }
 
 $tablet-width: 768px;
@@ -26,7 +26,7 @@ $darkpink: #D24899;
     
 }
 @media (min-width: $desktop-width){
-    width: 1200px; 
+    width: 1440px; 
 }
 }
 
