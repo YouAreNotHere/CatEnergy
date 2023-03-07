@@ -86,12 +86,12 @@
   }
 }
 @media (min-width:768px) {
-  .site-list__item a :nth-child(3) {
+  .site-list__item a {
     color: green
   }
 }
 @media (min-width:1440px) {
-  .site-list__item a :nth-child(3) {
+  .site-list__item a {
     color: #fff
   }
 }
@@ -226,9 +226,12 @@ li {
 }
 .main-nav__list :nth-child(3) a {
   background-color: green;
-  width: 153px;
-  height: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex
+  display: flex;
+  width: auto;
+  height: auto;
+  color: #fff;
+  padding: 0;
+  font-weight: 400
 }
