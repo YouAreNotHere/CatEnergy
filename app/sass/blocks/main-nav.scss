@@ -72,7 +72,7 @@ a{
 }
 }
 
-.site-list__item a :nth-child(3){
+.site-list__item a{
     
     @media (min-width: $tablet-width){
          color: green;
@@ -91,3 +91,4 @@ a{
         display: none;  
     }
 }
+
