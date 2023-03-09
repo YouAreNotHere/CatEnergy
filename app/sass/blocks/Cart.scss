@@ -2,12 +2,21 @@ $tablet-width: 768px;
 $desktop-width: 1440px;
 $mobile-width-only: 767px;
 
+@font-face {
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: normal;
+    src: local(oswaldmedium),
+    url("../../fonts/oswaldregular.woff2") format("woff2"),
+    url("../../fonts/oswaldregular.woff") format("woff");
+}
+
 .cart{
     display: flex;
     flex-wrap: wrap;
     margin:0 auto;
-    justify-content: center;
     align-items: flex-start;
+    flex-direction: column;
     
     @media (max-width: $mobile-width-only){
         margin-top: 11px;
@@ -27,5 +36,69 @@ $mobile-width-only: 767px;
         height: 553px;
         width: 1220px;
         flex-direction: column;
+    }
+}
+
+.page-main__title{
+    display: flex;
+    flex-direction: column;
+    
+    @media (max-width: $mobile-width-only){
+    font-size: 36px;
+    line-height: 36px;
+    width: 249px;
+    margin: 0 auto;
+    margin-top: 27px;
+    font-weight: 400;
+    justify-content: center;
+    text-align: center;
+    }
+    
+    @media (min-width: $tablet-width){
+        font-size: 60px;
+        line-height: 60px;
+        width: 430px;
+        //ПРИХОДИТСЯ УВЕЛИЧИВАТЬ ШИРИНУ, Т.К. НЕ ХВАТАЕТ БАЗОВОЙ(414)
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0 0 0 87px;
+    }
+    
+    @media (min-width: $desktop-width){
+        font-size: 60px;
+        line-height: 60px;
+        width: 430px;
+        //ПРИХОДИТСЯ УВЕЛИЧИВАТЬ ШИРИНУ, Т.К. НЕ ХВАТАЕТ БАЗОВОЙ(414)
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0 0 0 80px;
+    }
+}
+
+.page-main__title span{
+    display: flex;
+    text-transform: uppercase;
+    
+        @media (max-width: $mobile-width-only){
+    font-size: 14px;
+    line-height: 14px;
+    margin: 25px 0 29px 0;
+    font-weight: 400;
+    justify-content: center;
+    }
+    
+    @media (min-width: $tablet-width){
+    font-size: 20px;
+    line-height: 20px;
+    margin: 41px 0 49px 0;
+    font-weight: 400;
+    justify-content: flex-start;        
+    }
+    @media (min-width: $tablet-width){
+    font-size: 20px;
+    line-height: 20px;
+    margin: 40px 0 52px 0;
+    font-weight: 400;
+    justify-content: flex-start;        
     }
 }
