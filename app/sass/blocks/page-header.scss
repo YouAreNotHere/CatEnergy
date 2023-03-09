@@ -27,8 +27,9 @@ $darkpink: #D24899;
         height: 140px;   
     }
     @media (min-width: $desktop-width){
-        display: flex;
-        height: 223px;  
+        display: grid;
+        height: 223px;
+        grid-template-columns: 1fr 1fr;  
     }
 }
 // .page-header__container a{
@@ -38,7 +39,7 @@ $darkpink: #D24899;
 
 .page-header__container{
     display: flex;
-    width: 280px;
+    width: 87.5%;
     align-items: center;
     justify-content: space-around;
         
@@ -50,7 +51,8 @@ $darkpink: #D24899;
         }
         @media (min-width: $desktop-width){
             display: flex;
-            width: 202px;
+            //width: 202px;
+            flex-grow: 1;
             height: 59px;
             margin-top: 53px;
         }

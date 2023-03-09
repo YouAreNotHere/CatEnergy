@@ -22,3 +22,10 @@ $mobile-width-only: 767px;
     }
     
 }
+
+.information__list{
+    display: grid;
+    height: 300px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}

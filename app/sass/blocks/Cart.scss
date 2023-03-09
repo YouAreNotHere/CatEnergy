@@ -2,6 +2,12 @@ $tablet-width: 768px;
 $desktop-width: 1440px;
 $mobile-width-only: 767px;
 
+$darkgreen: #5EAA2F;
+$lightgreen: #68B738;
+$grey: #F2F2F2;
+$pink: #FF8282;
+$darkpink: #D24899;
+
 @font-face {
     font-family: "Oswald";
     font-style: normal;
@@ -22,8 +28,7 @@ $mobile-width-only: 767px;
         margin-top: 11px;
         height: 480px;
         width: 100%;
-        background-color: green;
-        color: white
+        color: white;
     }
     
     @media (min-width: $tablet-width){
@@ -46,22 +51,23 @@ $mobile-width-only: 767px;
     @media (max-width: $mobile-width-only){
     font-size: 36px;
     line-height: 36px;
-    width: 249px;
     margin: 0 auto;
     margin-top: 27px;
     font-weight: 400;
     justify-content: center;
     text-align: center;
+    width: 78.12%;
     }
     
     @media (min-width: $tablet-width){
         font-size: 60px;
         line-height: 60px;
-        width: 430px;
+        width: 414px;
         //ПРИХОДИТСЯ УВЕЛИЧИВАТЬ ШИРИНУ, Т.К. НЕ ХВАТАЕТ БАЗОВОЙ(414)
         justify-content: flex-start;
         align-items: flex-start;
         margin: 0 0 0 87px;
+        font-weight: 400;
     }
     
     @media (min-width: $desktop-width){
@@ -72,6 +78,20 @@ $mobile-width-only: 767px;
         justify-content: flex-start;
         align-items: flex-start;
         margin: 0 0 0 80px;
+    }
+}
+
+.cart-container{
+    @media (max-width: $mobile-width-only){
+        background-color: $lightgreen;
+        background-image: url(/../../img/src/cart/index-background-mobile\ 1.jpg);
+        background-repeat: no-repeat;
+        color: white;
+        background-position: top;
+        background-size: cover;
+        height: 305px;
+        display: flex;
+        width: 100%;
     }
 }
 
