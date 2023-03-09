@@ -1,0 +1,35 @@
+
+$tablet-width: 768px;
+$desktop-width: 1400px;
+$mobile-width-only: 767px;
+
+$darkgreen: #5EAA2F;
+$lightgreen: #68B738;
+$grey: #F2F2F2;
+$pink: #FF8282;
+$darkpink: #D24899;
+
+.example{
+    display: grid;
+    flex-wrap: wrap;
+    margin:0 auto;
+    box-sizing: border-box;
+    
+    @media (max-width: $mobile-width-only){
+        height: 705px;
+        width: 320px;
+        padding: 27px 20px 25px 20px;
+        background-color: $grey;
+        
+    }
+    
+    @media (min-width: $tablet-width){
+        height: 1081px;
+        width: 708px;
+    }
+    @media (min-width: $desktop-width){
+        height: 656px;
+        width: 1220px;
+    }
+}
+
