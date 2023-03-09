@@ -54,7 +54,6 @@ $darkpink: #D24899;
     margin: 0 auto;
     margin-top: 27px;
     font-weight: 400;
-    justify-content: center;
     text-align: center;
     width: 78.12%;
     }
@@ -64,10 +63,9 @@ $darkpink: #D24899;
         line-height: 60px;
         width: 414px;
         //ПРИХОДИТСЯ УВЕЛИЧИВАТЬ ШИРИНУ, Т.К. НЕ ХВАТАЕТ БАЗОВОЙ(414)
-        justify-content: flex-start;
-        align-items: flex-start;
         margin: 0 0 0 87px;
         font-weight: 400;
+        text-align: center;
     }
     
     @media (min-width: $desktop-width){
@@ -75,9 +73,8 @@ $darkpink: #D24899;
         line-height: 60px;
         width: 430px;
         //ПРИХОДИТСЯ УВЕЛИЧИВАТЬ ШИРИНУ, Т.К. НЕ ХВАТАЕТ БАЗОВОЙ(414)
-        justify-content: flex-start;
-        align-items: flex-start;
         margin: 0 0 0 80px;
+        text-align: center;
     }
 }
 
