@@ -2,6 +2,12 @@ $tablet-width: 768px;
 $desktop-width: 1440px;
 $mobile-width-only: 767px;
 
+$darkgreen: #5EAA2F;
+$lightgreen: #68B738;
+$grey: #F2F2F2;
+$pink: #FF8282;
+$darkpink: #D24899;
+
 .main-nav{
     text-align: center;
     justify-content: space-between;
@@ -25,11 +31,17 @@ $mobile-width-only: 767px;
     }
     @media (min-width: $desktop-width){
         height: 40px;
-        width: 478px;
+        display: flex;
+        width: 100%;
+        height: 696px;
         font-size: 20px;
-        background-color: green;
-        margin-left: 540px;
-        margin-top: 71px;
+        background-color: $lightgreen;
+        margin-left: 0px;
+        margin-top: 0;
+        padding-top: 71px;
+        background-image: url(/../../img/src/nav/index-background-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
 
