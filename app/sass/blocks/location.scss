@@ -1,0 +1,33 @@
+
+$tablet-width: 768px;
+$desktop-width: 1400px;
+$mobile-width-only: 767px;
+
+$darkgreen: #5EAA2F;
+$lightgreen: #68B738;
+$grey: #F2F2F2;
+$pink: #FF8282;
+$darkpink: #D24899;
+
+.location{
+    display: grid;
+    flex-wrap: wrap;
+    margin:0 auto;
+    box-sizing: border-box;
+    
+    @media (max-width: $mobile-width-only){
+        height: 476px;
+        width: 320px;
+        
+    }
+    
+    @media (min-width: $tablet-width){
+        height: 601px;
+        width: 768px;
+    }
+    @media (min-width: $desktop-width){
+        height: 400px;
+        width: 1440px;
+    }
+}
+
