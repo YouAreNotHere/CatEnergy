@@ -21,7 +21,6 @@
 }
 @media (max-width:767px) {
   .cart {
-    margin-top: 11px;
     height: 480px;
     width: 100%;
     color: #fff
@@ -76,7 +75,7 @@
     width: 414px;
     margin: 0 0 0 87px;
     font-weight: 400;
-    text-align: center
+    text-align: left
   }
 }
 @media (min-width:1440px) {
@@ -300,6 +299,12 @@
     width: 1440px
   }
 }
+@font-face {
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 400;
+  src: local(oswaldmedium),url(../../fonts/oswaldregular.woff2) format("woff2"),url(../../fonts/oswaldregular.woff) format("woff")
+}
 .main-nav {
   text-align: center;
   -webkit-box-pack: justify;
@@ -314,7 +319,27 @@
 }
 @media (max-width:767px) {
   .main-nav {
-    display: none
+    min-height: 198px;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 500;
+    margin: 0 auto;
+    width: 100%
+  }
+  .main-nav a {
+    color: #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-color: #e6e6e6;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center
   }
 }
 @media (min-width:768px) {
@@ -348,6 +373,17 @@
 .main-nav__wrapper {
   width: 100%
 }
+@media (max-width:767px) {
+  .main-nav__list {
+    display: -ms-grid;
+    display: grid;
+    height: 198px;
+    -ms-grid-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0;
+    width: 100%
+  }
+}
 @media (min-width:768px) {
   .main-nav__list {
     display: -webkit-box;
@@ -358,31 +394,17 @@
     width: 100%
   }
 }
-.main-nav__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex
-}
 @media (max-width:767px) {
-  .main-nav__list {
+  .site-list__item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column
-  }
-}
-@media (max-width:767px) {
-  .site-list__item {
-    padding: 10px 0 10px 0
-  }
-  .site-list__item a {
-    color: #000;
-    font-size: 24px;
-    line-height: 24px;
-    font-weight: 600
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-color: #e6e6e6;
+    border-style: inset;
+    border-width: 1px 0 1px 0
   }
 }
 @media (min-width:768px) {
@@ -404,6 +426,14 @@
   .main-nav__toggle {
     display: none
   }
+}
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 20px;
+  height: 10px;
+  background-color: red
 }
 @font-face {
   font-family: Oswald;
@@ -484,8 +514,7 @@ li {
 }
 @media (max-width:767px) {
   .page-header {
-    margin-top: 11px;
-    height: 37px
+    margin-top: 11px
   }
 }
 @media (min-width:768px) {
@@ -513,8 +542,9 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between
 }
 @media (min-width:768px) {
   .page-header__container {

@@ -23,14 +23,14 @@ $darkpink: #D24899;
     margin:0 auto;
     align-items: flex-start;
     flex-direction: column;
-    
+
     @media (max-width: $mobile-width-only){
-        margin-top: 11px;
+        //margin-top: 11px;!!!!!!!!!!!
         height: 480px;
         width: 100%;
         color: white;
     }
-    
+
     @media (min-width: $tablet-width){
         display: flex;
         height: 810px;
@@ -47,7 +47,7 @@ $darkpink: #D24899;
 .page-main__title{
     display: flex;
     flex-direction: column;
-    
+
     @media (max-width: $mobile-width-only){
     font-size: 36px;
     line-height: 36px;
@@ -57,17 +57,16 @@ $darkpink: #D24899;
     text-align: center;
     width: 78.12%;
     }
-    
+
     @media (min-width: $tablet-width){
         font-size: 60px;
         line-height: 60px;
         width: 414px;
-        //ПРИХОДИТСЯ УВЕЛИЧИВАТЬ ШИРИНУ, Т.К. НЕ ХВАТАЕТ БАЗОВОЙ(414)
         margin: 0 0 0 87px;
         font-weight: 400;
-        text-align: center;
+        text-align: left;
     }
-    
+
     @media (min-width: $desktop-width){
         font-size: 60px;
         line-height: 60px;
@@ -95,7 +94,7 @@ $darkpink: #D24899;
 .page-main__title span{
     display: flex;
     text-transform: uppercase;
-    
+
         @media (max-width: $mobile-width-only){
     font-size: 14px;
     line-height: 14px;
@@ -103,19 +102,19 @@ $darkpink: #D24899;
     font-weight: 400;
     justify-content: center;
     }
-    
+
     @media (min-width: $tablet-width){
     font-size: 20px;
     line-height: 20px;
     margin: 41px 0 49px 0;
     font-weight: 400;
-    justify-content: flex-start;        
+    justify-content: flex-start;
     }
     @media (min-width: $tablet-width){
     font-size: 20px;
     line-height: 20px;
     margin: 40px 0 52px 0;
     font-weight: 400;
-    justify-content: flex-start;        
+    justify-content: flex-start;
     }
 }

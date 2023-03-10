@@ -15,34 +15,28 @@ $darkpink: #D24899;
     margin:0 auto;
     justify-content: center;
     align-items: flex-start;
-    
+
     @media (max-width: $mobile-width-only){
         margin-top: 11px;
-        height: 37px;
-        
     }
-    
+
     @media (min-width: $tablet-width){
         display: flex;
-        height: 140px;   
+        height: 140px;
     }
     @media (min-width: $desktop-width){
         display: grid;
         height: 223px;
-        grid-template-columns: 1fr 1fr;  
+        grid-template-columns: 1fr 1fr;
     }
 }
-// .page-header__container a{
-   // @media (min-width: $tablet-width and $desktop-width){
-    //    display: none;
-   // }
 
 .page-header__container{
     display: flex;
     width: 87.5%;
     align-items: center;
-    justify-content: space-around;
-        
+    justify-content: space-between;
+
         @media (min-width: $tablet-width){
             display: flex;
             width: 175px;

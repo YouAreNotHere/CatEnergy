@@ -5,8 +5,18 @@ $mobile-width-only: 767px;
 $darkgreen: #5EAA2F;
 $lightgreen: #68B738;
 $grey: #F2F2F2;
+$darkgrey: #E6E6E6;
 $pink: #FF8282;
 $darkpink: #D24899;
+
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: normal;
+  src: local(oswaldmedium),
+  url("../../fonts/oswaldregular.woff2") format("woff2"),
+  url("../../fonts/oswaldregular.woff") format("woff");
+}
 
 .main-nav{
     text-align: center;
@@ -15,17 +25,30 @@ $darkpink: #D24899;
     text-transform: uppercase;
     font-weight: 400;
     display: flex;
-    
+
     @media (max-width:$mobile-width-only) {
-        display: none;
+        min-height: 198px;
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: 500;
+        margin: 0 auto;
+        width: 100%;
+        a {
+          color: black;
+          display: flex;
+          border-color: $darkgrey;
+          align-items: center;
+          width: 100%;
+          text-align: center;
+          justify-content: center;
+        }
     }
-    
+
     @media (min-width: $tablet-width){
         height: 36px;
         width: 440px;
         font-size: 18px;
         line-height: 24px;
-        
         margin-left: 95px;
         margin-top: 42px;
     }
@@ -50,33 +73,33 @@ $darkpink: #D24899;
 }
 
 .main-nav__list{
+
+    @media (max-width:$mobile-width-only) {
+      display: grid;
+      height: 198px;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 0;
+      width: 100%;
+}
     @media (min-width: $tablet-width){
         display: flex;
         justify-content: space-around;
         width: 100%;
         }
 }
-.main-nav__list{
-    display:flex;
-    
-    @media (max-width:$mobile-width-only) {
-        display: flex;
-        flex-direction: column;
-    }
+
+.site-list__item{
+  @media (max-width:$mobile-width-only) {
+    display: flex;
+    align-items: center;
+    border-color: $darkgrey;
+    border-style: inset;
+    border-width: 1px 0 1px 0;
 }
-    
-.site-list__item {
-    @media (max-width:$mobile-width-only) {
-    padding: 10px 0 10px 0;
-a{
-    color: black;
-    font-size: 24px;
-    line-height: 24px;
-    font-weight: 600;
-}}}
+}
 
 .site-list__item a{
-    
+
    @media (min-width: $tablet-width){
         color: black;
 }
@@ -87,12 +110,21 @@ a{
 
 
 .main-nav__toggle{
-    
+
         @media (min-width: $tablet-width){
-        display: none;   
+        display: none;
     }
     @media (min-width: $desktop-width){
-        display: none;  
+        display: none;
     }
 }
 
+.main-nav--closed .main-nav__toggle::before{
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 20px;
+  height: 10px;
+  background-color: red;
+
+}
