@@ -24,8 +24,14 @@ $darkpink: #D24899;
     font-style: normal;
     text-transform: uppercase;
     font-weight: 400;
-    display: flex;
 
+    &--closed{
+      display: none;
+    }
+
+    &--opened{
+      display: flex;
+    }
     @media (max-width:$mobile-width-only) {
         min-height: 198px;
         font-size: 20px;
@@ -94,7 +100,7 @@ $darkpink: #D24899;
     align-items: center;
     border-color: $darkgrey;
     border-style: inset;
-    border-width: 1px 0 1px 0;
+    border-width: 0.5px 0 0.5px 0;
 }
 }
 
