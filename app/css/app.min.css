@@ -417,24 +417,6 @@
     color: #fff
   }
 }
-@media (min-width:768px) {
-  .main-nav__toggle {
-    display: none
-  }
-}
-@media (min-width:1440px) {
-  .main-nav__toggle {
-    display: none
-  }
-}
-.main-nav--closed .main-nav__toggle::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 20px;
-  height: 10px;
-  background-color: red
-}
 @font-face {
   font-family: Oswald;
   font-style: normal;
@@ -567,4 +549,83 @@ li {
     height: 59px;
     margin-top: 53px
   }
+}
+.main-nav__toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: none;
+  color: #fff;
+  background-color: #fff;
+  width: 24px;
+  height: 19px;
+  position: relative;
+  padding: 0
+}
+@media (min-width:768px) {
+  .main-nav__toggle {
+    display: none
+  }
+}
+@media (min-width:1400px) {
+  .main-nav__toggle {
+    display: none
+  }
+}
+.main-nav__toggle--opened {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: none;
+  color: #fff;
+  background-color: #fff;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  padding: 0
+}
+@media (min-width:768px) {
+  .main-nav__toggle--opened {
+    display: none
+  }
+}
+@media (min-width:1400px) {
+  .main-nav__toggle--opened {
+    display: none
+  }
+}
+.main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 2px;
+  width: 24px;
+  z-index: 2;
+  background-color: #000;
+  -webkit-box-shadow: 0 8px 0 0 #000,0 16px 0 0 #000;
+          box-shadow: 0 8px 0 0 #000,0 16px 0 0 #000
+}
+.main-nav__toggle--opened::after,
+.main-nav__toggle--opened::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 12px;
+  height: 1px;
+  width: 24px;
+  z-index: 2;
+  background-color: #000
+}
+.main-nav__toggle--opened::before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-box-shadow: none;
+          box-shadow: none
+}
+.main-nav__toggle--opened::after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg)
 }
