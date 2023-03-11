@@ -51,3 +51,82 @@ $darkpink: #D24899;
             margin-top: 53px;
         }
 }
+
+.main-nav__toggle{
+  display: flex;
+  border: none;
+  color: white;
+  background-color: white;
+  width: 24px;
+  height: 19px;
+
+  position: relative;
+  padding: 0;
+
+  @media (min-width: $tablet-width){
+    display: none;
+  }
+  @media (min-width: $desktop-width){
+    display: none;
+  }
+}
+
+.main-nav__toggle--opened{
+  display: flex;
+  border: none;
+  color: white;
+  background-color: white;
+  width: 24px;
+  height: 24px;//closed 19
+
+  position: relative;
+  padding: 0;
+
+  @media (min-width: $tablet-width){
+    display: none;
+  }
+  @media (min-width: $desktop-width){
+    display: none;
+  }
+}
+
+
+.main-nav__toggle::before{
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 2px;
+  width: 24px;
+  z-index: 2;
+  background-color: black;
+  box-shadow: 0 8px 0 0 black, 0 16px 0 0 black;
+
+}
+
+.main-nav__toggle--opened{
+  &::before,
+  &::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 12px;
+    height: 1px;
+    width: 24px;
+    z-index: 2;
+    background-color: black;
+  }
+
+  &::before{
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after{
+    transform: rotate(-45deg);
+  }
+}
+
+
+
+
