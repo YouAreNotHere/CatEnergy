@@ -605,7 +605,7 @@ li {
 .main-nav__toggle--opened::before {
   content: "";
   position: absolute;
-  right: 25px;
+  right: 0;
   bottom: 12px;
   height: 1px;
   width: 24px;

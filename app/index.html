@@ -51,7 +51,7 @@
           </defs>
         </svg>
       </a>
-        <button class="main-nav__toggle" type="button">
+        <button class="main-nav__toggle main-nav__toggle--closed" type="button">
           <span class="visually-hidden"></span>
         </button>
       </div>
@@ -233,8 +233,8 @@
         <img src="img/footer/logo_html.png" alt="Лого HTML academy" width="163px" height="34px">
       </footer>
     </main>
-   <script src="js/app.min.js">
-   </script>
+   <!-- <script src="js/app.min.js">
+   </script> -->
    <script>
     var navMain = document.querySelector(".main-nav")
 var navToggle = document.querySelector(".main-nav__toggle")
@@ -251,7 +251,7 @@ navToggle.addEventListener("click", function(){
   }
   if (navToggle.classList.contains("main-nav__toggle--opened")){
     navToggle.classList.remove("main-nav__toggle--opened");
-    navToggle.classList.add("main-nav__toggle--closed);
+    navToggle.classList.add("main-nav__toggle--closed");
   } else {
     navToggle.classList.add("main-nav__toggle--opened");
     navToggle.classList.remove("main-nav__toggle--closed");
