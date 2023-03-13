@@ -62,9 +62,9 @@ $darkpink: #D24899;
         font-size: 60px;
         line-height: 60px;
         width: 414px;
-        margin: 0 0 0 87px;
         font-weight: 400;
         text-align: left;
+        margin: 0;
     }
 
     @media (min-width: $desktop-width){
@@ -88,9 +88,13 @@ $darkpink: #D24899;
         display: flex;
         width: 100%;
     }
+    @media(min-width: $tablet-width){
+        height: 284px;
+        margin: 0 0 0 87px;
+    }
 }
 
-.page-main__title span{
+.cart-container span{
     display: flex;
     text-transform: uppercase;
 
@@ -137,6 +141,16 @@ $darkpink: #D24899;
         justify-content: center;
         align-items: center;
     }
+    @media (min-width: $tablet-width){
+        font-size: 20px;
+        text-transform: uppercase;
+        width: 244px;
+        height: 54px;
+        margin-top: 49px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 @media (max-width: $mobile-width-only){
@@ -151,5 +165,18 @@ $darkpink: #D24899;
         background-repeat: no-repeat;
         background-size: cover;
         
+    }
+}
+@media (min-width: $tablet-width){
+    .cart__button::before{
+        content: "";
+        width: 280px;
+        height: 270px;
+        position: absolute;
+        bottom: 35px;
+        z-index: 2;
+        background-image: url(/../../img/src/cart/index-can-tablet1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
