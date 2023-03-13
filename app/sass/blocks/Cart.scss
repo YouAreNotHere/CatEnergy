@@ -61,7 +61,7 @@ $darkpink: #D24899;
     @media (min-width: $tablet-width){
         font-size: 60px;
         line-height: 60px;
-        width: 414px;
+        width: 420px;
         font-weight: 400;
         text-align: left;
         margin: 0;
@@ -71,8 +71,7 @@ $darkpink: #D24899;
         font-size: 60px;
         line-height: 60px;
         width: 430px;
-        margin: 0 0 0 80px;
-        text-align: center;
+        text-align: left;
     }
 }
 
@@ -87,10 +86,16 @@ $darkpink: #D24899;
         height: 305px;
         display: flex;
         width: 100%;
+        display: flex;
+        flex-direction: column;
     }
     @media(min-width: $tablet-width){
         height: 284px;
         margin: 0 0 0 87px;
+    }
+    @media (min-width: $desktop-width){
+        margin: 0 0 0 80px;
+        position: relative;
     }
 }
 
@@ -127,7 +132,7 @@ $darkpink: #D24899;
     background-color: $lightgreen;
     display: flex;
     font-family: Oswald;
-    position: relative;
+    border: none;
     
     @media (max-width: $mobile-width-only){
         font-size: 14px;
@@ -136,10 +141,11 @@ $darkpink: #D24899;
         width: 87.5%;
         height: 40px;
         margin: 0 auto;
-        margin-top: 135px;
+        top: 273px;
         text-align: center;
         justify-content: center;
         align-items: center;
+        position: relative;
     }
     @media (min-width: $tablet-width){
         font-size: 20px;
@@ -150,6 +156,11 @@ $darkpink: #D24899;
         text-align: center;
         justify-content: center;
         align-items: center;
+        position: relative;
+    }
+    @media (min-width: $tablet-width){
+        position:relative;
+        margin-top: 0;
     }
 }
 
@@ -170,13 +181,29 @@ $darkpink: #D24899;
 @media (min-width: $tablet-width){
     .cart__button::before{
         content: "";
-        width: 280px;
-        height: 270px;
+        width: 709px;
+        height: 609px;
         position: absolute;
-        bottom: 35px;
-        z-index: 2;
-        background-image: url(/../../img/src/cart/index-can-tablet1.png);
+        top: -30px;
+        left: -80px;
+        z-index: -1;
+        background-image: url(/../../img/src/cart/index-can-tablet-1.png);
         background-repeat: no-repeat;
         background-size: cover;
     }
 }
+@media (min-width: $desktop-width){
+    .cart__button::before{
+        content: "";
+        width: 522px;
+        height: 499px;
+        position: absolute;
+        left: 370px;
+        bottom: -125px;
+        z-index: 2;
+        background-image: url(/../../img/src/cart/index-can.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
