@@ -141,6 +141,46 @@
             justify-content: flex-start
   }
 }
+.cart__button {
+  color: #fff;
+  background-color: #68b738;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Oswald;
+  position: relative
+}
+@media (max-width:767px) {
+  .cart__button {
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    width: 87.5%;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 135px;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center
+  }
+}
+@media (max-width:767px) {
+  .cart__button::before {
+    content: "";
+    width: 280px;
+    height: 270px;
+    position: absolute;
+    bottom: 35px;
+    z-index: 2;
+    background-image: url(/../../img/src/cart/index-can-mobile%201.png);
+    background-repeat: no-repeat;
+    background-size: cover
+  }
+}
 .catalog {
   display: -ms-grid;
   display: grid;
@@ -314,8 +354,10 @@
   text-transform: uppercase;
   font-weight: 400
 }
-.main-nav--closed {
-  display: none
+@media (max-width:767px) {
+  .main-nav--closed {
+    display: none
+  }
 }
 .main-nav--opened {
   display: -webkit-box;

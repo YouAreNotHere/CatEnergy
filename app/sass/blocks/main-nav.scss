@@ -26,7 +26,9 @@ $darkpink: #D24899;
     font-weight: 400;
 
     &--closed{
+        @media (max-width:$mobile-width-only) {
       display: none;
+    }
     }
 
     &--opened{
