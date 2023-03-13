@@ -71,7 +71,6 @@ $darkpink: #D24899;
         font-size: 60px;
         line-height: 60px;
         width: 430px;
-        //ПРИХОДИТСЯ УВЕЛИЧИВАТЬ ШИРИНУ, Т.К. НЕ ХВАТАЕТ БАЗОВОЙ(414)
         margin: 0 0 0 80px;
         text-align: center;
     }
@@ -116,5 +115,41 @@ $darkpink: #D24899;
     margin: 40px 0 52px 0;
     font-weight: 400;
     justify-content: flex-start;
+    }
+}
+
+.cart__button{
+    color: white;
+    background-color: $lightgreen;
+    display: flex;
+    font-family: Oswald;
+    position: relative;
+    
+    @media (max-width: $mobile-width-only){
+        font-size: 14px;
+        line-height: 18px;
+        text-transform: uppercase;
+        width: 87.5%;
+        height: 40px;
+        margin: 0 auto;
+        margin-top: 135px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: $mobile-width-only){
+    .cart__button::before{
+        content: "";
+        width: 280px;
+        height: 270px;
+        position: absolute;
+        bottom: 35px;
+        z-index: 2;
+        background-image: url(/../../img/src/cart/index-can-mobile%201.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        
     }
 }
