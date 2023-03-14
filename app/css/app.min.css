@@ -242,7 +242,7 @@
     height: 499px;
     position: absolute;
     left: 370px;
-    bottom: -125px;
+    top: -310px;
     z-index: 2;
     background-image: url(/../../img/src/cart/index-can.png);
     background-repeat: no-repeat;
@@ -532,7 +532,9 @@
           justify-content: space-between;
   font-style: normal;
   text-transform: uppercase;
-  font-weight: 400
+  font-weight: 400;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap
 }
 @media (max-width:767px) {
   .main-nav--closed {
@@ -572,7 +574,7 @@
 @media (min-width:768px) {
   .main-nav {
     height: 36px;
-    width: 440px;
+    width: 57.5%;
     font-size: 18px;
     line-height: 24px;
     margin-left: 95px;
@@ -769,7 +771,8 @@ li {
         -ms-flex-positive: 1;
             flex-grow: 1;
     height: 59px;
-    margin-top: 53px
+    margin-top: 53px;
+    margin-left: 110px
   }
 }
 .main-nav__toggle {
