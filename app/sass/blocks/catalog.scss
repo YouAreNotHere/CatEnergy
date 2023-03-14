@@ -8,7 +8,7 @@ $grey: #F2F2F2;
     margin: 0 auto;
 
     @media (max-width: $mobile-width-only) {
-        width: 280px;
+        width: 87.5%;
         gap: 20px;
         height: 552px;
         margin-bottom: 27px;
@@ -37,5 +37,102 @@ $grey: #F2F2F2;
     @media (min-width: $tablet-width) {
         height: 372px;
         background-color: $grey;
+        padding: 77px 0 53px 53px;
+    }
+}
+
+.catalog-item__title{
+    font-size: 24px;
+    line-height: 37px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    position: relative;
+    margin: 30px 0 29px 0;
+    
+    &::before{
+        content: "";
+        background-image: url(/../../img/src/catalog/cat_back.png);
+        @media (max-width: $mobile-width-only) {
+            width: 50px;
+            height: 53px;
+            position: absolute;
+            left: 19px;
+            bottom: -5px;
+        }
+    }
+    
+    @media (min-width: $tablet-width) {
+        font-size: 36px;
+        line-height: 36px;
+        font-weight: 400;
+        display: flex;
+        justify-content: flex-start;
+        text-transform: uppercase;
+        position: relative;
+        //margin: 30px 0 29px 0;
+    }
+}
+
+.catalog-item__title--pro{
+    margin-left: 91px;
+    justify-content: flex-start;
+    
+    &::before{
+        display: none;
+    }
+    &::after{
+        content: "";
+        background-image: url(/../../img/src/catalog/cat_back2.png);
+        @media (max-width: $mobile-width-only) {
+            width: 67px;
+            height: 50px;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: -75px;
+            bottom: -5px;
+        }
+    }
+}
+.catalog-item__text{
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    font-family: arial;
+    width: 81.07%;
+    margin: 0 auto;
+    
+    @media (max-width: $mobile-width-only) {
+        box-shadow: 0 1px 0 0 #D9D9D9;
+        height: 113px;
+    }
+    
+    @media (min-width: $tablet-width) {
+      width: 53.25%;
+    }
+}
+
+.catalog-item__link{
+    font-size: 16px;
+    line-height: 16px;
+    color: black;
+    display: flex;
+    width: 81.07%;
+    margin: 0 auto;
+    margin-top: 15px;
+    align-items: center;
+    position: relative;
+    text-transform: uppercase;
+    
+    &::after{
+        content: "";
+        width: 32px;
+        height: 10px;
+        background-image: url(/../../img/src/catalog/icon_arrow.svg);
+        z-index: 2;
+        position: absolute;
+        top: 3,5px;
+        left: 100px;
     }
 }
