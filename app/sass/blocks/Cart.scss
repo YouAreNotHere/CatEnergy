@@ -25,7 +25,6 @@ $darkpink: #D24899;
     flex-direction: column;
 
     @media (max-width: $mobile-width-only){
-        //margin-top: 11px;!!!!!!!!!!!
         height: 480px;
         width: 100%;
         color: white;
@@ -33,8 +32,7 @@ $darkpink: #D24899;
 
     @media (min-width: $tablet-width){
         display: flex;
-        height: 810px;
-        width: 708px;
+        width: 92.18%;
     }
     @media (min-width: $desktop-width){
         display: flex;
@@ -90,7 +88,6 @@ $darkpink: #D24899;
         flex-direction: column;
     }
     @media(min-width: $tablet-width){
-        height: 284px;
         margin: 0 0 0 87px;
     }
     @media (min-width: $desktop-width){
@@ -152,7 +149,7 @@ $darkpink: #D24899;
         text-transform: uppercase;
         width: 244px;
         height: 54px;
-        margin-top: 49px;
+        margin: 49px 0 526px 0;
         text-align: center;
         justify-content: center;
         align-items: center;
