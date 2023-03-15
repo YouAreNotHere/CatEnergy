@@ -24,18 +24,29 @@ $mobile-width-only: 767px;
     margin: 0 0 38px 0;
     font-size: 36px;
     line-height: 40px;
+    font-weight: 400;
+
+    @media (min-width: $tablet-width){
+        margin: 0 0 0px 0;
+        font-size: 60px;
+        line-height: 60px;
+        font-weight: 400;
+    }
 }
+
+
 .information__list{
     display: grid;
-    height: 300px;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 20px;
     padding-left: 80px;
     font-size: 14px;
     line-height: 18px;
+    gap: 20px;
     
     @media (min-width: $tablet-width){
         grid-template-columns: 1fr 1fr;
+        padding: 0;
+        gap: 0;
     }
 }
 
@@ -48,36 +59,80 @@ $mobile-width-only: 767px;
         font-size: 16px;
         line-height: 24px;
         font-family: arial;
+        margin-top: 188px;
     }
 }
-width: 201px;
+
+.information__item:nth-child(2n){
+    @media (min-width: $tablet-width){
+        margin-left: 20px;
+    }
+}
+
 //Очень не изящно получается с повторением одних и тех же свойств, 
 //с разным background image, но как сделатьпо другому, я хз.
 
+.information__item--eat,
+.information__item--time,
+.information__item--form,
 .information__item--good{
-    @ width: 201px;
-   
     &::before{
         
-      content: "";
-      width: 60px;
-      height: 60px;
-      position: absolute;
-      bottom: 0px;
-      left: -80px;
-      z-index: 2;
-      background-image: url(/../../img/src/information/Group1.png);
-      background-repeat: no-repeat;
-      background-size: cover;
-     }
-    
-     @media (min-width: $tablet-width){
-        width: 80px;
-        height: 80px;
-      }
-    }
+        content: "";
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        bottom: 0px;
+        left: -80px;
+        z-index: 2;
+        background-repeat: no-repeat;
+        background-size: cover;
 
-.information__item--form::before{
+        @media (min-width: $tablet-width){
+            width: 80px;
+            height: 80px;
+            bottom: 103px;
+            left: 0;
+          }
+        
+          &::after{
+
+            @media (min-width: $tablet-width){
+            content: "";
+            position: absolute;
+            height: 220px;
+            width: 90px;
+            background-size: contain;
+            z-index: -1;
+            bottom: -40px;
+            left: 110px;
+            }
+        }
+    }
+    
+}
+
+
+.information__item--good{
+
+    &::before{
+      background-image: url(/../../img/src/information/Group1.png);
+    }
+    
+      @media (min-width: $tablet-width){
+         width: 201px;
+       }
+
+    &::after{
+        @media (min-width: $tablet-width){
+        background-image: url(/../../img/src/information/1.png);
+        }
+    }
+}
+
+.information__item--form{
+  
+  &::before{
     content: "";
     width: 60px;
     height: 60px;
@@ -88,14 +143,22 @@ width: 201px;
     background-image: url(/../../img/src/information/Group2.png);
     background-repeat: no-repeat;
     background-size: cover;
-    
     @media (min-width: $tablet-width){
         width: 80px;
         height: 80px;
+        bottom: 103px;
+        left: 0;
+      }
+  }
+    @media (min-width: $tablet-width){
+        width: 227px;
     }
 }
 
-.information__item--eat::before{
+
+.information__item--eat{
+  
+    &::before{
     content: "";
     width: 60px;
     height: 60px;
@@ -106,14 +169,22 @@ width: 201px;
     background-image: url(/../../img/src/information/Group3.png);
     background-repeat: no-repeat;
     background-size: cover;
-    
-     @media (min-width: $tablet-width){
+    @media (min-width: $tablet-width){
         width: 80px;
         height: 80px;
+        bottom: 103px;
+        left: 0;
+      }
+  }
+    
+     @media (min-width: $tablet-width){
+        width: 227px;
     }
 }
 
-.information__item--time::before{
+.information__item--time{
+  
+    &::before{
     content: "";
     width: 60px;
     height: 60px;
@@ -124,9 +195,15 @@ width: 201px;
     background-image: url(/../../img/src/information/Group4.png);
     background-repeat: no-repeat;
     background-size: cover;
-    
-     @media (min-width: $tablet-width){
+    @media (min-width: $tablet-width){
         width: 80px;
         height: 80px;
+        bottom: 103px;
+        left: 0;
+      }
+    }
+    
+     @media (min-width: $tablet-width){
+        width: 245px;
     }
 }
