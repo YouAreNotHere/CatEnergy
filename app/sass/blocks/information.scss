@@ -11,8 +11,7 @@ $mobile-width-only: 767px;
     }
     
     @media (min-width: $tablet-width) {
-        width: 708px;
-        height: 736px;
+        width: 92.18%;
     }
     
     @media (min-width: $desktop-width) {
@@ -34,13 +33,51 @@ $mobile-width-only: 767px;
     padding-left: 80px;
     font-size: 14px;
     line-height: 18px;
+    
+    @media (min-width: $tablet-width){
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .information__item{
     position: relative;
+    display: flex;
+    align-items: center;
+    
+    @media (min-width: $tablet-width){
+        font-size: 16px;
+        line-height: 24px;
+        font-family: arial;
+    }
 }
+width: 201px;
+//Очень не изящно получается с повторением одних и тех же свойств, 
+//с разным background image, но как сделатьпо другому, я хз.
 
-.information__item--good::before{
+.information__item--good{
+    @ width: 201px;
+   
+    &::before{
+        
+      content: "";
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      bottom: 0px;
+      left: -80px;
+      z-index: 2;
+      background-image: url(/../../img/src/information/Group1.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+     }
+    
+     @media (min-width: $tablet-width){
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+.information__item--form::before{
     content: "";
     width: 60px;
     height: 60px;
@@ -48,7 +85,48 @@ $mobile-width-only: 767px;
     bottom: 0px;
     left: -80px;
     z-index: 2;
-    background-image: url(/../../img/src/information/Group1.png);
+    background-image: url(/../../img/src/information/Group2.png);
     background-repeat: no-repeat;
     background-size: cover;
+    
+    @media (min-width: $tablet-width){
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.information__item--eat::before{
+    content: "";
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: 0px;
+    left: -80px;
+    z-index: 2;
+    background-image: url(/../../img/src/information/Group3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+     @media (min-width: $tablet-width){
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.information__item--time::before{
+    content: "";
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: 0px;
+    left: -80px;
+    z-index: 2;
+    background-image: url(/../../img/src/information/Group4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+     @media (min-width: $tablet-width){
+        width: 80px;
+        height: 80px;
+    }
 }
