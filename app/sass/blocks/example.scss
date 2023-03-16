@@ -10,17 +10,28 @@ $pink: #FF8282;
 $darkpink: #D24899;
 
 .example{
+
+    @media (max-width: $mobile-width-only){
+        background-color: $grey;
+        width: 100%;
+    }
+    
+    @media (min-width: $tablet-width){
+
+    }
+    @media (min-width: $desktop-width){
+
+    }
+}
+
+.example-container{
+    width: 87.5%;
     display: grid;
     flex-wrap: wrap;
-    margin:0 auto;
-    box-sizing: border-box;
+    margin: 0 auto;
     
     @media (max-width: $mobile-width-only){
-        height: 705px;
-        width: 320px;
-        padding: 27px 20px 25px 20px;
         background-color: $grey;
-        
     }
     
     @media (min-width: $tablet-width){
@@ -33,3 +44,26 @@ $darkpink: #D24899;
     }
 }
 
+.example__title{
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 400;
+    margin: 27px 0 33px 0;
+}
+
+.example__text{
+    margin: 0 0 25px 0;
+}
+
+.example__resources-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    //grid-template-rows: 1fr 1fr;
+}
+
+.example__resource:nth-child(3){
+    //grid-column-start: 1;
+    //grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
