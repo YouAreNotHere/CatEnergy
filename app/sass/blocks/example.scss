@@ -58,17 +58,50 @@ $darkpink: #D24899;
 .example__resources-list{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    //grid-auto-rows: 1fr;
+    grid-template-areas:
+    "A B"
+    "C C";
+    justify-items: center;
+    column-gap: 31px;
+    row-gap: 25px;
     
     @media (min-width: $tablet-width){
         grid-template-columns: 1fr 1fr 2fr;
         justify-content: flex-end;
     }
 }
-
+.example__resource:nth-child(1){
+    grid-area: A;
+}
+.example__resource:nth-child(2){
+    grid-area: B;
+}
 .example__resource:nth-child(3){
-    //grid-column-start: 1;
-    //grid-column-end: 4;
-   // grid-row-start: 1;
-    //grid-row-end: 3;
+    grid-area: C;
+    margin-bottom: 297px;
+    position: relative;
+
+    &::after, &::before{
+        content: "";
+        width: 251px;
+        height: 240px;
+        display: flex;
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 1;
+        top: 42px;
+        position: absolute;
+    }
+
+    &::after{
+        background-image: url(/../../img/src/example/after-mobile1.png);
+    }
+
+    &::before{
+        background-image: url(/../../img/src/example/before-mobile1.png);
+        width: 311px;
+        height: 232px;
+        left: -35px;
+        z-index: 2;
+    }
 }
