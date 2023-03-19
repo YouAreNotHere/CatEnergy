@@ -37,7 +37,7 @@ $darkpink: #D24899;
     @media (min-width: $desktop-width){
         display: flex;
         height: 553px;
-        width: 1220px;
+        width: 84.72%;
         flex-direction: column;
         margin-top: 80px;
     }
@@ -77,7 +77,7 @@ $darkpink: #D24899;
 .cart-container{
     @media (max-width: $mobile-width-only){
         background-color: $lightgreen;
-        background-image: url(/../../img/src/cart/index-background-mobile\ 1.jpg);
+        background-image: url(/../../img/src/cart/index-background-mobile.jpg);
         background-repeat: no-repeat;
         color: white;
         background-position: top;
@@ -87,6 +87,10 @@ $darkpink: #D24899;
         width: 100%;
         display: flex;
         flex-direction: column;
+
+        @media (min-resolution: 2dppx){
+          background-image: url(/../../img/src/cart/index-background-mobile@2x.jpg);
+        }
     }
     @media(min-width: $tablet-width){
         margin: 0 0 0 87px;
@@ -131,7 +135,7 @@ $darkpink: #D24899;
     display: flex;
     font-family: Oswald;
     border: none;
-    
+
     @media (max-width: $mobile-width-only){
         font-size: 14px;
         line-height: 18px;
@@ -173,7 +177,7 @@ $darkpink: #D24899;
         background-image: url(/../../img/src/cart/index-can-mobile%201.png);
         background-repeat: no-repeat;
         background-size: cover;
-        
+
     }
 }
 @media (min-width: $tablet-width){

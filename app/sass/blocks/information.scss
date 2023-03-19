@@ -9,15 +9,15 @@ $mobile-width-only: 767px;
       width: 87.5%;
       margin-bottom: 42px;
     }
-    
+
     @media (min-width: $tablet-width) {
         width: 92.18%;
     }
-    
+
     @media (min-width: $desktop-width) {
-        width: 1220px;
+        width: 84.72%;;
     }
-    
+
 }
 
 .information__title{
@@ -41,17 +41,17 @@ $mobile-width-only: 767px;
     font-size: 14px;
     line-height: 18px;
     gap: 20px;
-    
+
     @media (max-width: $mobile-width-only){
         grid-template-rows: 1fr 1fr 1fr 1fr;
     }
-    
+
     @media (min-width: $tablet-width){
         grid-template-columns: 1fr 1fr;
         padding: 0;
         gap: 0;
     }
-    
+
     @media (min-width: $desktop-width){
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
@@ -61,12 +61,14 @@ $mobile-width-only: 767px;
     position: relative;
     display: flex;
     align-items: center;
-    
+    min-height: 54px;
+
     @media (min-width: $tablet-width){
         font-size: 16px;
         line-height: 24px;
         font-family: arial;
         margin-top: 183px;
+
     }
     @media (min-width: $desktop-width){
         margin: 183px 0 126px 0;
@@ -81,7 +83,7 @@ $mobile-width-only: 767px;
 
 
 .information__item{
-    
+
     &::before{
         content: "";
         width: 60px;
@@ -100,9 +102,9 @@ $mobile-width-only: 767px;
             left: 0;
         }
     }
-        
+
         &::after{
-            
+
             @media (min-width: $tablet-width){
               content: "";
               position: absolute;
@@ -124,7 +126,7 @@ $mobile-width-only: 767px;
     &::before{
       background-image: url(/../../img/src/information/Group1.png);
     }
-    
+
       @media (min-width: $tablet-width){
          width: 201px;
          align-items: start;
@@ -138,7 +140,7 @@ $mobile-width-only: 767px;
 }
 
 .information__item:nth-child(2){
-  
+
   &::before{
     background-image: url(/../../img/src/information/Group2.png);
 
@@ -158,21 +160,21 @@ $mobile-width-only: 767px;
 
 
 .information__item:nth-child(3){
-  
+
     &::before{
       background-image: url(/../../img/src/information/Group3.png);
     }
-    
+
     @media (min-width: $tablet-width){
         width: 227px;
         margin-bottom: 147px;
         margin-top: 245px;
     }
-    
+
     @media (min-width: $desktop-width){
         margin: 183px 0 126px 0;
     }
-    
+
     &::after{
         @media (min-width: $tablet-width){
           background-image: url(/../../img/src/information/3.png);
@@ -183,21 +185,21 @@ $mobile-width-only: 767px;
 }
 
 .information__item:nth-child(4){
-  
+
     &::before{
     background-image: url(/../../img/src/information/Group4.png);
     }
-    
+
      @media (min-width: $tablet-width){
         width: 245px;
         margin-bottom: 147px;
         margin-top: 245px;
     }
-    
+
     @media (min-width: $desktop-width){
         margin: 183px 0 126px 0;
     }
-    
+
     &::after{
         @media (min-width: $tablet-width){
           background-image: url(/../../img/src/information/4.png);
