@@ -15,7 +15,7 @@ $darkpink: #D24899;
         background-color: $grey;
         width: 100%;
     }
-    
+
     @media (min-width: $tablet-width){
 
     }
@@ -29,18 +29,18 @@ $darkpink: #D24899;
     display: grid;
     flex-wrap: wrap;
     margin: 0 auto;
-    
+
     @media (max-width: $mobile-width-only){
         background-color: $grey;
     }
-    
+
     @media (min-width: $tablet-width){
         height: 1081px;
-        width: 708px;
+        width: 92.18%;;
     }
     @media (min-width: $desktop-width){
         height: 656px;
-        width: 1220px;
+        width: 84.72%;
     }
 }
 
@@ -64,7 +64,7 @@ $darkpink: #D24899;
     justify-items: center;
     column-gap: 31px;
     row-gap: 25px;
-    
+
     @media (min-width: $tablet-width){
         grid-template-columns: 1fr 1fr 2fr;
         justify-content: flex-end;
