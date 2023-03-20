@@ -16,19 +16,17 @@ $darkpink: #D24899;
     flex-wrap: wrap;
     margin:0 auto;
     box-sizing: border-box;
+    width: 100%;
     
     @media (max-width: $mobile-width-only){
-        width: 100%;
-        background-color: $grey;
-        
+        background-color: $grey;  
     }
     
     @media (min-width: $tablet-width){
-        width: 768px;
         background-color: $grey;
+        grid-template-columns: 2fr 1fr;
     }
     @media (min-width: $desktop-width){
-        width: 1440px;
         background-color: $grey;
     }
 }
@@ -42,6 +40,11 @@ $darkpink: #D24899;
     gap:0;
     justify-items: center;
     align-items: center;
+
+    @media (min-width: $tablet-width){
+        width: 63.3vw;
+        flex-direction: row;
+    }
 }
 
 .footer-logo{

@@ -37,7 +37,7 @@ $darkpink: #D24899;
     }
 
     @media (min-width: $tablet-width){
-        width: 92.18%;;
+        width: 92.18%;
     }
     @media (min-width: $desktop-width){
         width: 84.72%;
@@ -127,33 +127,33 @@ $darkpink: #D24899;
         padding-left: 167px;
         font-size: 20px;
         line-height: 20px;
+        margin-bottom: 100px;
     }
     
-    margin-bottom: 297px;
+    margin-bottom: 42px;
     position: relative;
     
 
-    &::after, &::before{
-        content: "";
-        width: 251px;
-        height: 240px;
-        display: flex;
-        background-size: contain;
-        background-repeat: no-repeat;
-        z-index: 1;
-        top: 42px;
-        position: absolute;
-    }
+}
 
-    &::after{
-        background-image: url(/../../img/src/example/after-mobile1.png);
-    }
+.exampe__images{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
 
-    &::before{
-        background-image: url(/../../img/src/example/before-mobile1.png);
-        width: 311px;
-        height: 232px;
-        left: -35px;
-        z-index: 2;
-    }
+.exampe__images picture{
+    display: flex;
+    justify-content: center;
+}
+
+.exampe__images picture:nth-child(1){
+    z-index: 2;
+}
+
+.exampe__images picture:nth-child(2){
+    position: absolute;
+    top:0;
+    right: 0;
+    left: 0;
 }
