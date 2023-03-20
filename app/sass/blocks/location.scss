@@ -6,6 +6,8 @@ $mobile-width-only: 767px;
 $darkgreen: #5EAA2F;
 $lightgreen: #68B738;
 $grey: #F2F2F2;
+$darkgrey: #E6E6E6;
+$lightgrey: #D9D9D9;
 $pink: #FF8282;
 $darkpink: #D24899;
 
@@ -16,18 +18,39 @@ $darkpink: #D24899;
     box-sizing: border-box;
     
     @media (max-width: $mobile-width-only){
-        height: 476px;
-        width: 320px;
-        
+        width: 100%;
     }
     
     @media (min-width: $tablet-width){
-        height: 601px;
         width: 768px;
     }
     @media (min-width: $desktop-width){
-        height: 400px;
         width: 1440px;
     }
 }
 
+.location iframe{
+    height: 362px;
+}
+
+.location-container{
+    width: 87.5%;
+    margin: 0 auto;
+    padding: 28px 0 22px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.location__title{
+    margin: 0;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+.location__text{
+    margin: 0;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: arial;
+}
