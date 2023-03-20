@@ -2,6 +2,11 @@ $tablet-width: 768px;
 $desktop-width: 1440px;
 $mobile-width-only: 767px;
 
+.information-wrapper{
+    width: 100%;
+    border-bottom: 1px solid #E6E6E6; 
+}
+
 .information{
     margin: 0 auto;
 
@@ -167,7 +172,7 @@ $mobile-width-only: 767px;
 
     @media (min-width: $tablet-width){
         width: 227px;
-        margin-bottom: 147px;
+        margin-bottom: 100px;
         margin-top: 245px;
     }
 
@@ -192,7 +197,7 @@ $mobile-width-only: 767px;
 
      @media (min-width: $tablet-width){
         width: 245px;
-        margin-bottom: 147px;
+        margin-bottom: 100px;
         margin-top: 245px;
     }
 
