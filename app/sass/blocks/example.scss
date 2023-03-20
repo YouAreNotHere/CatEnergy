@@ -37,11 +37,9 @@ $darkpink: #D24899;
     }
 
     @media (min-width: $tablet-width){
-        height: 1081px;
         width: 92.18%;;
     }
     @media (min-width: $desktop-width){
-        height: 656px;
         width: 84.72%;
     }
 }
@@ -51,10 +49,23 @@ $darkpink: #D24899;
     line-height: 40px;
     font-weight: 400;
     margin: 27px 0 33px 0;
+    
+    @media (min-width: $tablet-width){
+        margin: 43px 0 63px 0;
+        font-size: 60px;
+        line-height: 60px;
+    }
 }
 
 .example__text{
     margin: 0 0 25px 0;
+     @media (min-width: $tablet-width){
+         font-family: Arial;
+         font-size: 16px;
+         line-height: 24px;
+         margin: 0 0 54px 0;
+         //С заданными параметрами текст умещается не так, как в макете!
+    }
 }
 
 .example__resources-list{
@@ -70,18 +81,57 @@ $darkpink: #D24899;
     @media (min-width: $tablet-width){
         grid-template-columns: 1fr 1fr 2fr;
         justify-content: flex-end;
+        grid-template-areas: none;
     }
 }
 .example__resource:nth-child(1){
-    grid-area: A;
+    @media (max-width: $mobile-width-only){
+        grid-area: A;
+    }
+    @media (min-width: $tablet-width){
+        font-size: 14px;
+        line-height: 14px;
+        
+        span{
+             font-size: 30px;
+             line-height: 37px;
+         }
+    }
 }
 .example__resource:nth-child(2){
-    grid-area: B;
+    @media (max-width: $mobile-width-only){
+        grid-area: B;
+    }
+     @media (min-width: $tablet-width){
+        font-size: 14px;
+        line-height: 14px;
+         
+         span{
+             font-size: 30px;
+             line-height: 37px;
+         }
+    }
+}
+
+.example__resource{
+    @media (min-width: $tablet-width){
+        display: flex;
+        flex-direction: column;
+    }
 }
 .example__resource:nth-child(3){
-    grid-area: C;
+    @media (max-width: $mobile-width-only){
+        grid-area: C;
+    }
+    @media (min-width: $tablet-width){
+        padding-left: 167px;
+        font-size: 20px;
+        line-height: 20px;
+    }
+    
     margin-bottom: 297px;
     position: relative;
+    
 
     &::after, &::before{
         content: "";
