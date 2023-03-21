@@ -17,6 +17,7 @@ $darkpink: #D24899;
     margin:0 auto;
     box-sizing: border-box;
     width: 100%;
+    position: relative;
 }
 
 .location iframe{
@@ -43,8 +44,16 @@ $darkpink: #D24899;
     }
 
     @media (min-width: $desktop-width){
-        width: 84.72%;
+        width: 39.58vw;
+        margin: 0;
+        padding: 66.31px 82px 51.27px 76px;
+        position: absolute;
+        background-color: white;
+        left: 110px;
+        top: 95px;
+        //Окошко закрывает метку адреса на карте
     }
+
 }
 
 .location__title{

@@ -22,7 +22,8 @@ $darkpink: #D24899;
 
     }
     @media (min-width: $desktop-width){
-
+        background-color: $grey;
+        position: relative;
     }
 }
 
@@ -41,6 +42,10 @@ $darkpink: #D24899;
     }
     @media (min-width: $desktop-width){
         width: 84.72%;
+        $example-shift: -195px;
+        position: relative;
+        top: $example-shift;
+        margin-bottom: $example-shift;
     }
 }
 
@@ -55,6 +60,10 @@ $darkpink: #D24899;
         font-size: 60px;
         line-height: 60px;
     }
+
+    @media (min-width: $desktop-width){
+        margin: 84px 0 146px 0;
+    }
 }
 
 .example__text{
@@ -65,6 +74,10 @@ $darkpink: #D24899;
          line-height: 24px;
          margin: 0 0 54px 0;
          //С заданными параметрами текст умещается не так, как в макете!
+    }
+    @media (min-width: $desktop-width){
+        width: 436px;
+        margin: 0 0 69px 0;
     }
 }
 
@@ -82,6 +95,15 @@ $darkpink: #D24899;
         grid-template-columns: 1fr 1fr 2fr;
         justify-content: flex-end;
         grid-template-areas: none;
+    }
+    @media (min-width: $desktop-width){
+        width: 366px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "A B"
+        "C C";
+        gap: 42px;
+        row-gap: 0;
     }
 }
 .example__resource:nth-child(1){
@@ -113,6 +135,12 @@ $darkpink: #D24899;
              margin: 0;
          }
     }
+
+    @media (min-width: $desktop-width){
+        span{
+            background-color: $grey;
+        }
+    }
 }
 .example__resource:nth-child(2){
     @media (max-width: $mobile-width-only){
@@ -142,8 +170,19 @@ $darkpink: #D24899;
              position: relative;
              margin: 0 0 59px 0;
          }
+         }
+         @media (min-width: $desktop-width){
+            p{
+                margin: 0 0 55px 0;
+        }
     }
-}
+
+    @media (min-width: $desktop-width){
+        span{
+            background-color: $grey;
+        }
+    }
+    }
 
 .example__resource{
     @media (min-width: $tablet-width){
@@ -165,25 +204,49 @@ $darkpink: #D24899;
     margin-bottom: 42px;
     position: relative;
     
+    @media (min-width: $desktop-width){
+        padding: 0;
+        justify-content: center;
+        display: flex;
+        margin: 0;
+        grid-area: C;
+        justify-self: start;
+
+        p{
+            margin: 0;
+        }
+
+        span{
+            margin: 0 0 0 80px;
+            justify-self: center;
+        }
+    }
 
 }
 
-.exampe__images{
+.example__images{
     position: relative;
     display: flex;
     flex-direction: column;
+
+    @media (min-width: $desktop-width){
+        position: absolute;
+        right: 70px;
+        top: 69px;
+
+    }
 }
 
-.exampe__images picture{
+.example__images picture{
     display: flex;
     justify-content: center;
 }
 
-.exampe__images picture:nth-child(1){
+.example__images picture:nth-child(1){
     z-index: 2;
 }
 
-.exampe__images picture:nth-child(2){
+.example__images picture:nth-child(2){
     position: absolute;
     top:0;
     right: 0;

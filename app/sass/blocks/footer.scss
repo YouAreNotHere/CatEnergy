@@ -30,6 +30,7 @@ $darkpink: #D24899;
     }
     @media (min-width: $desktop-width){
         background-color: $grey;
+        padding: 57px 0 58px 0;
     }
 }
 
@@ -108,6 +109,11 @@ $darkpink: #D24899;
     svg{
       width: 23px;
       height: 16px;
+
+      @media (min-width: $tablet-width){
+        width: 30px;
+        height: 22px;
+}
     }
 }
 
@@ -118,6 +124,11 @@ $darkpink: #D24899;
     svg{
       width: 16px;
       height: 16px;
+
+      @media (min-width: $tablet-width){
+        width: 23px;
+        height: 23px;
+}
     }
 }
 
@@ -131,6 +142,11 @@ $darkpink: #D24899;
     svg{
       width: 22px;
       height: 22px;
+
+      @media (min-width: $tablet-width){
+        width: 28px;
+        height: 33px;
+}
     }
 }
 
