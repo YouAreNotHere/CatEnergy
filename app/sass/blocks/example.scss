@@ -89,12 +89,28 @@ $darkpink: #D24899;
         grid-area: A;
     }
     @media (min-width: $tablet-width){
-        font-size: 14px;
-        line-height: 14px;
-        
         span{
+             font-size: 14px;
+             line-height: 14px;
+             position: absolute;
+             left: 30px;
+             top: 70px;
+             width: 97px;
+             height: 14px;
+             display: flex;
+             justify-content: center;
+             z-index: 2;
+             background-color: white;
+        }
+        
+        p{
              font-size: 30px;
              line-height: 37px;
+             padding: 15px 57px 25px 57px;
+             border: 1px solid #CDCDCD;
+             border-radius: 5px;
+             position: relative;
+             margin: 0;
          }
     }
 }
@@ -103,12 +119,28 @@ $darkpink: #D24899;
         grid-area: B;
     }
      @media (min-width: $tablet-width){
-        font-size: 14px;
-        line-height: 14px;
-         
          span{
+             font-size: 14px;
+             line-height: 14px;
+             position: absolute;
+             left: 15px;
+             top: 70px;
+             width: 127px;
+             height: 14px;
+             display: flex;
+             justify-content: center;
+             z-index: 2;
+             background-color: white;
+             }
+         
+         p{
              font-size: 30px;
              line-height: 37px;
+             padding: 15px 30px 25px 30px;
+             border: 1px solid #CDCDCD;
+             border-radius: 5px;
+             position: relative;
+             margin: 0 0 59px 0;
          }
     }
 }
@@ -127,7 +159,7 @@ $darkpink: #D24899;
         padding-left: 167px;
         font-size: 20px;
         line-height: 20px;
-        margin-bottom: 100px;
+        margin: 11px 0 0 0;
     }
     
     margin-bottom: 42px;
