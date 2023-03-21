@@ -4,7 +4,12 @@ $mobile-width-only: 767px;
 
 .information-wrapper{
     width: 100%;
-    border-bottom: 1px solid #E6E6E6; 
+    border-bottom: 1px solid #E6E6E6;
+    @media (min-width: $desktop-width) {
+        margin-bottom: 205px;
+        border: 0;
+    }
+     
 }
 
 .information{
@@ -76,7 +81,7 @@ $mobile-width-only: 767px;
 
     }
     @media (min-width: $desktop-width){
-        margin: 183px 0 126px 0;
+        margin: 190px 0 48px 0;
     }
 }
 
@@ -177,7 +182,7 @@ $mobile-width-only: 767px;
     }
 
     @media (min-width: $desktop-width){
-        margin: 183px 0 126px 0;
+        margin: 183px 0 48px 0;
     }
 
     &::after{
@@ -202,7 +207,7 @@ $mobile-width-only: 767px;
     }
 
     @media (min-width: $desktop-width){
-        margin: 183px 0 126px 0;
+        margin: 183px 0 48px 0;
     }
 
     &::after{
