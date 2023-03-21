@@ -166,10 +166,10 @@
               </p>
               <ul class="example__resources-list">
                 <li class="example__resource">
-                  <span> 5 кг </span> снижения веса
+                  <p> 5 кг <span>снижения веса</span></p>
                 </li>
                 <li class="example__resource">
-                  <span> 60 дней </span> затрачено времени
+                   <p>60 дней <span>затрачено времени</span></p>
                 </li>
                 <li class="example__resource">
                   Затраты на питание: 15000 руб.
@@ -236,8 +236,13 @@
       </section>
       <footer class="footer">
           <div class="footer__container">
+              <div class="footer__contacts">
              <a href="#" class="footer-logo">
-               <img src="img/src/footer/footer-logo.png" alt="Логотип" width="128px" height="24px">
+                 <picture>
+                     <source media="(min-width:768px)"
+                     srcset="/../../img/src/footer/768w/footer-logo-2.svg" width="128px" height="24px" >
+                     <img src="img/src/footer/footer-logo.png" alt="Логотип" width="114px" height="18px">
+                 </picture>
              </a>
             <div class="social-web-container">
              <ul class="social-web">
@@ -278,6 +283,7 @@
               <img src="img/src/footer/logo_html_1.png" alt="Лого HTML academy" width="114px" height="18px">
               <img src="img/src/footer/logo_html_2.png" alt="Лого HTML academy" width="27px" height="32px">
           </div>
+              </div>
       </footer>
     </main>
    <!-- <script src="js/app.min.js">

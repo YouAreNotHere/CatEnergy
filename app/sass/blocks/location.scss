@@ -21,6 +21,10 @@ $darkpink: #D24899;
 
 .location iframe{
     height: 362px;
+    
+    @media (min-width: $tablet-width){
+        height: 400px;
+    }
 }
 
 .location-container{
@@ -31,8 +35,11 @@ $darkpink: #D24899;
     grid-template-columns: 1fr 1fr;
 
     @media (min-width: $tablet-width){
-        padding: 99.31px 71px 51.27px 72px;
-        margin: 0;
+        width: 81.38%;
+        margin: 0 auto;
+        margin-top: 99.31px;
+        margin-bottom: 51.27px;
+        padding: 0;
     }
 
     @media (min-width: $desktop-width){
