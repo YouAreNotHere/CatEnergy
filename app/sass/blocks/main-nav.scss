@@ -26,6 +26,14 @@ $darkpink: #D24899;
     text-transform: uppercase;
     font-weight: 400;
     flex-wrap: wrap;
+    
+      :hover{
+            opacity: 0.6;
+        }
+        
+        :active{
+            opacity: 0.3;
+        }
 
     &--closed{
         @media (max-width:$mobile-width-only) {

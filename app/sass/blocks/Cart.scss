@@ -23,6 +23,7 @@ $darkpink: #D24899;
     margin:0 auto;
     align-items: flex-start;
     flex-direction: column;
+    
 
     @media (max-width: $mobile-width-only){
         height: 480px;
@@ -87,6 +88,8 @@ $darkpink: #D24899;
         width: 100%;
         display: flex;
         flex-direction: column;
+        position: relative;
+
 
         @media (min-resolution: 2dppx){
           background-image: url(/../../img/src/cart/index-background-mobile@2x.jpg);
@@ -130,6 +133,15 @@ $darkpink: #D24899;
 }
 
 .cart__button{
+    
+    &:hover{
+        background: $darkgreen;
+    }
+    
+    &:active{
+        background: $darkgreen;
+    }
+    
     color: white;
     background-color: $lightgreen;
     display: flex;
@@ -143,11 +155,13 @@ $darkpink: #D24899;
         width: 87.5%;
         height: 40px;
         margin: 0 auto;
-        top: 273px;
+        position: absolute;
+        top: 455px;
+        right: 0;
+        left: 0;
         text-align: center;
         justify-content: center;
         align-items: center;
-        position: relative;
     }
     @media (min-width: $tablet-width){
         font-size: 20px;
@@ -158,36 +172,45 @@ $darkpink: #D24899;
         text-align: center;
         justify-content: center;
         align-items: center;
-        position: relative;
     }
     @media (min-width: $tablet-width){
-        position:relative;
         margin-top: 0;
     }
 }
 
+.cart__button span{
+    :hover{
+        opacity: 1;
+    }
+    :active{
+        opacity: 0.3;
+    }
+}
+
 @media (max-width: $mobile-width-only){
-    .cart__button::before{
+    .cart-container::before{
         content: "";
         width: 280px;
         height: 270px;
         position: absolute;
-        bottom: 35px;
+        top: 187.5px;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
         z-index: 2;
         background-image: url(/../../img/src/cart/index-can-mobile%201.png);
         background-repeat: no-repeat;
         background-size: cover;
-
     }
 }
 @media (min-width: $tablet-width){
-    .cart__button::before{
+    .cart-container::before{
         content: "";
         width: 709px;
         height: 609px;
         position: absolute;
-        top: -30px;
-        left: -80px;
+        top: 342px;
+        left: 90px;
         z-index: -1;
         background-image: url(/../../img/src/cart/index-can-tablet-1.png);
         background-repeat: no-repeat;
@@ -195,13 +218,13 @@ $darkpink: #D24899;
     }
 }
 @media (min-width: $desktop-width){
-    .cart__button::before{
+    .cart-container::before{
         content: "";
         width: 522px;
         height: 499px;
         position: absolute;
         left: 370px;
-        top: -310px;
+        top: -100px;
         z-index: 2;
         background-image: url(/../../img/src/cart/index-can.png);
         background-repeat: no-repeat;

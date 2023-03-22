@@ -103,7 +103,8 @@
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column
+            flex-direction: column;
+    position: relative
   }
 }
 @media (max-width:767px) and (-webkit-min-device-pixel-ratio:2), (max-width:767px) and (-o-min-device-pixel-ratio:2/1), (max-width:767px) and (min-resolution:2dppx) {
@@ -170,6 +171,12 @@
   font-family: Oswald;
   border: none
 }
+.cart__button:hover {
+  background: #5eaa2f
+}
+.cart__button:active {
+  background: #5eaa2f
+}
 @media (max-width:767px) {
   .cart__button {
     font-size: 14px;
@@ -178,15 +185,17 @@
     width: 87.5%;
     height: 40px;
     margin: 0 auto;
-    top: 273px;
+    position: absolute;
+    top: 455px;
+    right: 0;
+    left: 0;
     text-align: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center;
-    position: relative
+            align-items: center
   }
 }
 @media (min-width:768px) {
@@ -202,23 +211,30 @@
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center;
-    position: relative
+            align-items: center
   }
 }
 @media (min-width:768px) {
   .cart__button {
-    position: relative;
     margin-top: 0
   }
 }
+.cart__button span :hover {
+  opacity: 1
+}
+.cart__button span :active {
+  opacity: .3
+}
 @media (max-width:767px) {
-  .cart__button::before {
+  .cart-container::before {
     content: "";
     width: 280px;
     height: 270px;
     position: absolute;
-    bottom: 35px;
+    top: 187.5px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
     z-index: 2;
     background-image: url(/../../img/src/cart/index-can-mobile%201.png);
     background-repeat: no-repeat;
@@ -226,13 +242,13 @@
   }
 }
 @media (min-width:768px) {
-  .cart__button::before {
+  .cart-container::before {
     content: "";
     width: 709px;
     height: 609px;
     position: absolute;
-    top: -30px;
-    left: -80px;
+    top: 342px;
+    left: 90px;
     z-index: -1;
     background-image: url(/../../img/src/cart/index-can-tablet-1.png);
     background-repeat: no-repeat;
@@ -240,13 +256,13 @@
   }
 }
 @media (min-width:1440px) {
-  .cart__button::before {
+  .cart-container::before {
     content: "";
     width: 522px;
     height: 499px;
     position: absolute;
     left: 370px;
-    top: -310px;
+    top: -100px;
     z-index: 2;
     background-image: url(/../../img/src/cart/index-can.png);
     background-repeat: no-repeat;
@@ -1348,6 +1364,12 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap
 }
+.main-nav :hover {
+  opacity: .6
+}
+.main-nav :active {
+  opacity: .3
+}
 @media (max-width:767px) {
   .main-nav--closed {
     display: none
@@ -1598,6 +1620,12 @@ li {
     width: 202px;
     height: 59px
   }
+}
+.page-header__logo :hover {
+  opacity: .8
+}
+.page-header__logo :active {
+  opacity: .6
 }
 @media (min-width:768px) {
   .page-header__logo-text {
