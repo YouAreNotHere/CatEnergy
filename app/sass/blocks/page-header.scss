@@ -66,6 +66,14 @@ $darkpink: #D24899;
         width: 202px;
         height: 59px;
     }
+    
+    :hover{
+        opacity: 0.8;
+    }
+    
+    :active{
+        opacity: 0.6;
+    }
 }
 .page-header__logo-text{
     @media (min-width: $tablet-width){
