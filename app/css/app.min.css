@@ -1082,6 +1082,9 @@
             justify-content: flex-end
   }
 }
+.footer__container--2:hover .html-logo {
+  stroke: #68b738
+}
 .footer__container--2:active .html-logo,
 .footer__container--2:active .html-text {
   opacity: .3
@@ -1392,12 +1395,6 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap
 }
-.main-nav :hover {
-  opacity: .6
-}
-.main-nav :active {
-  opacity: .3
-}
 @media (max-width:767px) {
   .main-nav--closed {
     display: none
@@ -1497,6 +1494,12 @@
     border-style: inset;
     border-width: .5px 0 .5px 0
   }
+}
+.site-list__item a:hover {
+  opacity: .6
+}
+.site-list__item a:active {
+  opacity: .3
 }
 @media (min-width:768px) {
   .site-list__item a {

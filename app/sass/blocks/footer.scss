@@ -189,9 +189,12 @@ $darkpink: #D24899;
           justify-content: flex-end;
     }
 
-
+    &:hover{
+      .html-logo{
+        stroke: $lightgreen;
+      }
+    }
     &:active{
-
     .html-text, .html-logo{
         opacity: 0.3;
     }

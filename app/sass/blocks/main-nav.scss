@@ -26,14 +26,6 @@ $darkpink: #D24899;
     text-transform: uppercase;
     font-weight: 400;
     flex-wrap: wrap;
-    
-      :hover{
-            opacity: 0.6;
-        }
-        
-        :active{
-            opacity: 0.3;
-        }
 
     &--closed{
         @media (max-width:$mobile-width-only) {
@@ -113,7 +105,18 @@ $darkpink: #D24899;
     border-color: $darkgrey;
     border-style: inset;
     border-width: 0.5px 0 0.5px 0;
-}
+  }
+
+    a{
+      &:hover{
+        opacity: 0.6;
+    }
+
+    &:active{
+        opacity: 0.3;
+    }
+    }
+
 }
 
 .site-list__item a{
