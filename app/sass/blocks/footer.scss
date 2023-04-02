@@ -50,6 +50,10 @@ $darkpink: #D24899;
         padding: 0;
         justify-content: space-between;
     }
+
+    @media (min-width: $desktop-width){
+      width: 84.72%;
+    }
 }
 
 .footer__contacts{
@@ -60,7 +64,11 @@ $darkpink: #D24899;
     @media (min-width: $tablet-width){
         flex-direction: row;
         justify-content: space-between;
-        width: 66.66vw;
+        width: 53.77vw;
+    }
+
+    @media (min-width: $tablet-width){
+      width: 46.52vw;
     }
 }
 .footer-logo{
@@ -100,12 +108,11 @@ $darkpink: #D24899;
     width: 40.62vw;
 
     @media (min-width: $tablet-width){
-            width: 33.33vw;
+            width: 129px;
     }
 }
 
 .social-web__item{
-  background-color: yellow;
   :hover{
     stroke: $lightgreen;
 }
@@ -119,7 +126,9 @@ $darkpink: #D24899;
     height: 63px;
     align-items: center;
 
-
+    @media (min-width: $tablet-width){
+      height: auto;
+    }
 }
 
 .social-web__link--vk{
@@ -127,7 +136,7 @@ $darkpink: #D24899;
     justify-content: flex-start;
 
         @media (min-width: $tablet-width){
-            justify-content: flex-end;
+            justify-content: center;
     }
 
     svg{
@@ -161,11 +170,12 @@ $darkpink: #D24899;
     justify-content: flex-end;
 
     @media (min-width: $tablet-width){
-            justify-content: flex-start;
+            justify-content: center;
     }
     svg{
       width: 22px;
       height: 22px;
+      stroke: #666666;
 
       @media (min-width: $tablet-width){
         width: 28px;
@@ -187,6 +197,7 @@ $darkpink: #D24899;
             margin: 0;
           align-items: center;
           justify-content: flex-end;
+          padding: 0;
     }
 
     &:hover{
@@ -202,23 +213,13 @@ $darkpink: #D24899;
       stroke: $lightgreen;
     }
   }
-
-    // svg:nth-child(3){
-    //   &:hover{
-    //     stroke: $lightgreen;
-    // }
-
-    // &:active{
-    //     fill: $lightgreen;
-    //     opacity: 0.3;
-    // }
-    // }
 }
 
-.footer__container--2 img:nth-child(1){
+.footer__container--2 svg:nth-child(1){
 
           @media (min-width: $tablet-width){
               padding: 0 22px 0 0;
     }
 }
+
 
