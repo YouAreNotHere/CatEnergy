@@ -900,6 +900,11 @@
             justify-content: space-between
   }
 }
+@media (min-width:1400px) {
+  .footer__container {
+    width: 84.72%
+  }
+}
 .footer__contacts {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -921,7 +926,12 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 66.66vw
+    width: 53.77vw
+  }
+}
+@media (min-width:768px) {
+  .footer__contacts {
+    width: 46.52vw
   }
 }
 .footer-logo {
@@ -970,11 +980,8 @@
 }
 @media (min-width:768px) {
   .social-web {
-    width: 33.33vw
+    width: 129px
   }
-}
-.social-web__item {
-  background-color: #ff0
 }
 .social-web__item :hover {
   stroke: #68b738
@@ -988,6 +995,11 @@
       -ms-flex-align: center;
           align-items: center
 }
+@media (min-width:768px) {
+  .social-web__link {
+    height: auto
+  }
+}
 .social-web__link--vk {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -998,9 +1010,9 @@
 }
 @media (min-width:768px) {
   .social-web__link--vk {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center
   }
 }
 .social-web__link--vk svg {
@@ -1041,14 +1053,15 @@
 }
 @media (min-width:768px) {
   .social-web__link--facebook {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center
   }
 }
 .social-web__link--facebook svg {
   width: 22px;
-  height: 22px
+  height: 22px;
+  stroke: #666
 }
 @media (min-width:768px) {
   .social-web__link--facebook svg {
@@ -1079,7 +1092,8 @@
             align-items: center;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
-            justify-content: flex-end
+            justify-content: flex-end;
+    padding: 0
   }
 }
 .footer__container--2:hover .html-logo {
@@ -1093,7 +1107,7 @@
   stroke: #68b738
 }
 @media (min-width:768px) {
-  .footer__container--2 img:nth-child(1) {
+  .footer__container--2 svg:nth-child(1) {
     padding: 0 22px 0 0
   }
 }
