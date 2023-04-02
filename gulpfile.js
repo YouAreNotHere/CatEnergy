@@ -112,7 +112,7 @@ function svgsprite(){
       }
   };
 
-  return src("app/img/src/footer/*.svg")
+  return src("app/img/src/**/*.svg")
       .pipe(svgSprite(config)).on('error', function(error){ console.log(error); })
       .pipe(dest("app/"))
 }
