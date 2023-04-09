@@ -179,6 +179,9 @@ $darkpink: #D24899;
 }
 
 .cart__button span{
+    justify-content: center;
+    align-items: center;
+    margin: 0;
     :hover{
         opacity: 1;
     }

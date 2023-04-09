@@ -38,6 +38,7 @@ $darkpink: #D24899;
 }
 
 .catalog-item{
+    position: relative;
     @media (max-width: $mobile-width-only) {
         height: 266px;
         background-color: $grey;
@@ -48,6 +49,22 @@ $darkpink: #D24899;
         position: relative;
     }
 }
+
+.catalog__picture{
+    
+    &--slim{
+        position: absolute;
+        top: 21px;
+        left: 22px;
+    }
+
+    &--pro{
+        position: absolute;
+        top: 24px;
+        left: 13px;
+    }
+}
+
 
 .catalog-item__title{
     font-size: 24px;
@@ -62,34 +79,34 @@ $darkpink: #D24899;
         position: relative;
     }
 
-    &::before{
-        content: "";
-        position: absolute;
+    // &::before{
+    //     content: "";
+    //     position: absolute;
 
-        @media (max-width: $mobile-width-only) {
-            width: 50px;
-            height: 53px;
-            background-image: url(/../../img/src/catalog/cat_back.png);
-            left: 19px;
-            bottom: -5px;
-        }
+    //     @media (max-width: $mobile-width-only) {
+    //         width: 50px;
+    //         height: 53px;
+    //         background-image: url(/../../img/src/catalog/cat_back.png);
+    //         left: 19px;
+    //         bottom: -5px;
+    //     }
 
-        @media (min-width: $tablet-width) {
-            width: 200px;
-            height: 211px;
-            background-image: url(/../../img/src/catalog/cat_back_tablet.png);
-            right: 62px;
-            top: 81px;
-        }
+    //     @media (min-width: $tablet-width) {
+    //         width: 200px;
+    //         height: 211px;
+    //         background-image: url(/../../img/src/catalog/cat_back_tablet.png);
+    //         right: 62px;
+    //         top: 81px;
+    //     }
 
-        @media (min-width: $desktop-width){
-            top: 41px;
-            left: 52px;
-            width: 100px;
-            height: 106px;
-            background-size: contain;
-        }
-    }
+    //     @media (min-width: $desktop-width){
+    //         top: 41px;
+    //         left: 52px;
+    //         width: 100px;
+    //         height: 106px;
+    //         background-size: contain;
+    //     }
+    // }
 
     @media (min-width: $tablet-width) {
         font-size: 36px;
@@ -124,38 +141,38 @@ $darkpink: #D24899;
         margin-left: 91px;
     }
 
-    &::before{
-        display: none;
-    }
-    &::after{
-        content: "";
-        background-repeat: no-repeat;
-        position: absolute;
-        z-index: 2;
-        @media (max-width: $mobile-width-only) {
-            background-image: url(/../../img/src/catalog/cat_back2.png);
-            width: 67px;
-            height: 50px;
-            left: 13px;
-            bottom: -5px;
-        }
-        @media (min-width: $tablet-width) {
-            background-image: url(/../../img/src/catalog/cat_back_tablet2.png);
-            width: 268px;
-            height: 200px;
-            top:91px;
-            right: 28px;
-            background-size: cover;
+    // &::before{
+    //     display: none;
+    // }
+    // &::after{
+    //     content: "";
+    //     background-repeat: no-repeat;
+    //     position: absolute;
+    //     z-index: 2;
+    //     @media (max-width: $mobile-width-only) {
+    //         background-image: url(/../../img/src/catalog/cat_back2.png);
+    //         width: 67px;
+    //         height: 50px;
+    //         left: 13px;
+    //         bottom: -5px;
+    //     }
+    //     @media (min-width: $tablet-width) {
+    //         background-image: url(/../../img/src/catalog/cat_back_tablet2.png);
+    //         width: 268px;
+    //         height: 200px;
+    //         top:91px;
+    //         right: 28px;
+    //         background-size: cover;
 
-        }
-         @media (min-width: $desktop-width){
-            top: 47px;
-            left: 33px;
-            width: 134px;
-            height: 100px;
-            background-size: contain;
-        }
-    }
+    //     }
+    //      @media (min-width: $desktop-width){
+    //         top: 47px;
+    //         left: 33px;
+    //         width: 134px;
+    //         height: 100px;
+    //         background-size: contain;
+    //     }
+    // }
 }
 .catalog-item__text{
     font-size: 14px;

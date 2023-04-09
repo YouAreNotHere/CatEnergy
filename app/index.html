@@ -58,7 +58,6 @@
           <span>Занялся собой? Займись котом!
           </span>
           <button class="cart__button" type="button">
-<!--              Все прописано по пикселям, но картинка вылезает за марджины-->
             <span>Подобрать программу</span>
           </button>
         </div>
@@ -68,6 +67,9 @@
           Карточки товаров для набора и потери массы животных
         </h2>
         <div class="catalog-item">
+          <svg width="50" height="53" viewBox="0 0 50 53" class="catalog__picture--slim">
+            <use xlink:href="sprite.svg#catalog--cat_back1"></use>
+          </svg>
           <h3 class="catalog-item__title">
             Похудение
           </h3>
@@ -80,6 +82,9 @@
           </a>
         </div>
         <div class="catalog-item">
+          <svg width="67" height="50" viewBox="0 0 67 50" class="catalog__picture--pro">
+            <use xlink:href="sprite.svg#catalog--cat_back2"></use>
+          </svg>
           <h3 class="catalog-item__title catalog-item__title--pro">
             Набор массы
           </h3>
@@ -100,7 +105,7 @@
         <ul class="information__list">
           <li class="information__item">
             <div class="information__picture">
-              <svg width="30" height="32" viewBox="0 0 30 32" fill="white">
+              <svg width="30" height="32" viewBox="0 0 30 32" fill="white" stroke="white">
                 <use xlink:href="sprite.svg#information--icon_leaf"></use>
               </svg>
             </div>
