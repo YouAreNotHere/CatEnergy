@@ -64,18 +64,17 @@ $darkpink: #D24899;
     @media (min-width: $tablet-width){
         flex-direction: row;
         justify-content: space-between;
-        width: 53.77vw;
-    }
-
-    @media (min-width: $tablet-width){
-      width: 46.52vw;
+        width: 58.33%;
     }
 }
+
 .footer-logo{
     padding: 39px 0 32px 0;
 
       @media (min-width: $tablet-width){
           padding: 0;
+          width: 33.33vw;
+          display: flex;
 }
     :hover{
     opacity: 0.8;
@@ -95,9 +94,10 @@ $darkpink: #D24899;
     padding: 0;
 
         @media (min-width: $tablet-width){
-            width: auto;
+            display: flex;
             padding: 0;
             border: 0;
+            justify-content: end;
     }
 }
 
@@ -193,7 +193,7 @@ $darkpink: #D24899;
     align-items: center;
 
       @media (min-width: $tablet-width){
-            width: 33.33vw;
+            width: 23.02%;
             margin: 0;
           align-items: center;
           justify-content: flex-end;
