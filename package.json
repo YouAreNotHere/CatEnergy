@@ -25,5 +25,8 @@
     "gulp-uglify-es": "^3.0.0",
     "gulp-watch": "^5.0.1",
     "sass": "^1.58.3"
+  },
+  "dependencies": {
+    "html": "^1.0.0"
   }
 }

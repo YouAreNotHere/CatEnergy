@@ -99,6 +99,10 @@ $darkpink: #D24899;
   align-items: center;
   justify-content: center;
   background-color: $lightgreen;
+
+  svg{
+    z-index: 2;
+  }
 }
 
 .information__item:nth-child(2n){
