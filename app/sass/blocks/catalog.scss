@@ -56,12 +56,40 @@ $darkpink: #D24899;
         position: absolute;
         top: 21px;
         left: 22px;
+        
+        @media (min-width: $tablet-width) {
+            top: 81px;
+            left: 446px;
+            width:200px;
+            height:211px;
+        }
+
+        @media (min-width: $desktop-width) {
+            top: 41px;
+            left: 52px;
+            width:100px;
+            height:106px;
+        }
     }
 
     &--pro{
         position: absolute;
         top: 24px;
         left: 13px;
+
+        @media (min-width: $tablet-width) {
+            top: 91px;
+            left: 412px;
+            width:268px;
+            height:200px;
+        }
+
+        @media (min-width: $desktop-width) {
+            top: 33px;
+            left: 47px;
+            width:134px;
+            height:100px;
+        }
     }
 }
 
