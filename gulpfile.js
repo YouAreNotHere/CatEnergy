@@ -22,6 +22,11 @@ const replace = require('gulp-replace');
 //const gwatch = require("gulp-watch");
 //const imagemin = require("gulp-imagemin");
 //import gulp-imagemin from "gulp-imagemin";
+const tests = require ("testScssLint");
+const paths = {
+  scss: './app/sass/blocks/*.scss',
+};
+const stylelint = require ("stylelint");
 
 let preprocessor = 'sass';
 
@@ -160,3 +165,23 @@ function svgSpriteBuil(){
   exports.svgsprite = svgsprite;
   exports.svgspritebuil = svgSpriteBuil;
 //exports.images = images;
+  exports.tests = tests;
+
+
+function testScssLint() {
+  return src(paths.scss).
+    pipe(stylelint({
+      reporters: [
+        {
+          failAfterError: true,
+          formatter: 'string',
+          console: true,
+        },
+      ],
+    }));
+  }
+
+
+
+
+
