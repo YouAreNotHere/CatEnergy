@@ -1,11 +1,13 @@
 {
-  "name": "CatEnergy",
+  "name": "Cat-Energy",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "gulp tests",
-    "editorconfig": "editorconfig-cli"
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"app/sass/blocks/*.scss\"",
+    "stylelint:fix": "stylelint \"app/sass/blocks/*.scss\" --fix",
+    "test": "npm run editorconfig && npm run stylelint && npm run stylelint:fix"
   },
   "author": "",
   "license": "ISC",
@@ -15,7 +17,6 @@
     "@babel/node": "^7.20.7",
     "@babel/preset-env": "^7.21.4",
     "browser-sync": "^2.27.x",
-    "editorconfig-cli": "^0.3.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.x",
     "gulp-cheerio": "^1.0.x",
@@ -26,7 +27,6 @@
     "gulp-replace": "^1.1.x",
     "gulp-sass": "^5.1.x",
     "gulp-sourcemaps": "^3.0.x",
-    "gulp-stylelint": "^13.0.0",
     "gulp-svg-sprite": "^2.0.x",
     "gulp-svgmin": "^4.1.x",
     "gulp-uglify-es": "^3.0.x",
@@ -36,6 +36,14 @@
     "stylelint-config-recommended-scss": "^10.0.0",
     "stylelint-scss": "^4.6.0"
   },
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "app/*.html",
+    "app/js/*.js",
+    "app/*.svg",
+    "app/sass/**/*.scss"
+  ],
   "dependencies": {
     "html": "^1.0.0"
   }
