@@ -12,73 +12,73 @@ $pink: #FF8282;
 $darkpink: #D24899;
 
 .page-header{
-    display: flex;
-    flex-wrap: wrap;
-    margin:0 auto;
-    justify-content: center;
-    align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  margin:0 auto;
+  justify-content: center;
+  align-items: flex-start;
 
-    @media (max-width: $mobile-width-only){
-        margin-top: 11px;
-    }
+  @media (max-width: $mobile-width-only){
+    margin-top: 11px;
+  }
 
-    @media (min-width: $tablet-width){
-        height: 140px;
-    }
-    @media (min-width: $desktop-width){
-        display: grid;
-        height: 223px;
-        grid-template-columns: 1fr 1fr;
-    }
+  @media (min-width: $tablet-width){
+    height: 140px;
+  }
+  @media (min-width: $desktop-width){
+    display: grid;
+    height: 223px;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .page-header__container{
-    display: flex;
-    width: 87.5%;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  width: 87.5%;
+  align-items: center;
+  justify-content: space-between;
 
-        @media (min-width: $tablet-width){
-            display: flex;
-            width: 175px;
-            height: 52px;
-            margin-top: 24px;
-        }
-        @media (min-width: $desktop-width){
-            display: flex;
-            flex-grow: 1;
-            height: 59px;
-            width: 202px;
-            margin-top: 53px;
-            margin-left: 110px;
-        }
+  @media (min-width: $tablet-width){
+    display: flex;
+    width: 175px;
+    height: 52px;
+    margin-top: 24px;
+  }
+  @media (min-width: $desktop-width){
+    display: flex;
+    flex-grow: 1;
+    height: 59px;
+    width: 202px;
+    margin-top: 53px;
+    margin-left: 110px;
+  }
 }
 
 .page-header__logo{
     
-    @media (min-width: $tablet-width){
-        width: 174px;
-        height: 52px;
-        display: flex;
-    }
+  @media (min-width: $tablet-width){
+    width: 174px;
+    height: 52px;
+    display: flex;
+  }
     
-    @media (min-width: $desktop-width){
-        width: 202px;
-        height: 59px;
-    }
+  @media (min-width: $desktop-width){
+    width: 202px;
+    height: 59px;
+  }
     
-    :hover{
-        opacity: 0.8;
-    }
+  :hover{
+    opacity: 0.8;
+  }
     
-    :active{
-        opacity: 0.6;
-    }
+  :active{
+    opacity: 0.6;
+  }
 }
 .page-header__logo-text{
-    @media (min-width: $tablet-width){
-        display: none;
-    }
+  @media (min-width: $tablet-width){
+    display: none;
+  }
 }
 
 .main-nav__toggle{
@@ -154,7 +154,7 @@ $darkpink: #D24899;
 }
 
 .main-nav__toggle--nojs{
-    display: none;
+  display: none;
 }
 
 
