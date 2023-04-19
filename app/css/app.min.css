@@ -95,10 +95,9 @@
     background-position: top;
     background-size: cover;
     height: 305px;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
-    width: 100%;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -168,7 +167,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: Oswald;
+  font-family: Oswald,sans-serif;
   border: none
 }
 .cart__button:hover {
@@ -449,7 +448,7 @@
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
-  font-family: arial;
+  font-family: arial,sans-serif;
   width: 81.07%;
   margin: 0 auto
 }
@@ -588,7 +587,7 @@
 }
 @media (min-width:768px) {
   .example__text {
-    font-family: Arial;
+    font-family: Arial,sans-serif;
     font-size: 16px;
     line-height: 24px;
     margin: 0 0 54px 0
@@ -632,6 +631,17 @@
         grid-template-areas: "A B" "C C";
     gap: 42px;
     row-gap: 0
+  }
+}
+@media (min-width:768px) {
+  .example__resource {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column
   }
 }
 @media (max-width:767px) {
@@ -717,17 +727,6 @@
 @media (min-width:1400px) {
   .example__resource:nth-child(2) span {
     background-color: #f2f2f2
-  }
-}
-@media (min-width:768px) {
-  .example__resource {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column
   }
 }
 .example__resource:nth-child(3) {
@@ -1471,7 +1470,6 @@
 }
 @media (min-width:1440px) {
   .main-nav {
-    height: 40px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1524,12 +1522,6 @@
     border-width: .5px 0 .5px 0
   }
 }
-.site-list__item a:hover {
-  opacity: .6
-}
-.site-list__item a:active {
-  opacity: .3
-}
 @media (min-width:768px) {
   .site-list__item a {
     color: #000
@@ -1539,6 +1531,12 @@
   .site-list__item a {
     color: #fff
   }
+}
+.site-list__item a:hover {
+  opacity: .6
+}
+.site-list__item a:active {
+  opacity: .3
 }
 .main-nav--nojs {
   display: -webkit-box;
