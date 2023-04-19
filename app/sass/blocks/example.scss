@@ -103,6 +103,14 @@ $darkpink: #D24899;
     row-gap: 0;
   }
 }
+
+.example__resource{
+  @media (min-width: $tablet-width){
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .example__resource:nth-child(1){
   @media (max-width: $mobile-width-only){
     grid-area: A;
@@ -139,6 +147,7 @@ $darkpink: #D24899;
     }
   }
 }
+
 .example__resource:nth-child(2){
   @media (max-width: $mobile-width-only){
     grid-area: B;
@@ -181,12 +190,6 @@ $darkpink: #D24899;
   }
 }
 
-.example__resource{
-  @media (min-width: $tablet-width){
-    display: flex;
-    flex-direction: column;
-  }
-}
 .example__resource:nth-child(3){
   @media (max-width: $mobile-width-only){
     grid-area: C;
