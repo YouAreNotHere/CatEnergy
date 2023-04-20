@@ -61,7 +61,7 @@ function buildcopy(){
 //function images(){
     //return src("app/img/src/**/*")
     //.pipe(imagemin())
-   // .pipe(dest("app/img/dest/"))
+  // .pipe(dest("app/img/dest/"))
 
 //}
 
@@ -123,38 +123,35 @@ function svgsprite(){
 }
 
 function svgSpriteBuil(){
-	return src('app/img/src/**/*.svg')
-	// minify svg
-		.pipe(svgmin({
-			js2svg: {
-				pretty: true
-			}
-		}))
-		// remove all fill, style and stroke declarations in out shapes
-		.pipe(cheerio({
-			run: function ($) {
-				$('[fill]').removeAttr('fill');
-				$('[stroke]').removeAttr('stroke');
-				$('[style]').removeAttr('style');
-			},
-			parserOptions: {xmlMode: true}
-		}))
-		// cheerio plugin create unnecessary string '&gt;', so replace it.
-		.pipe(replace('&gt;', '>'))
-		// build svg sprite
-		.pipe(svgSprite({
-			mode: {
-				symbol: {
-					sprite: "app/sprite.svg",
-					render: {
-						scss: {
-							dest:'app/sass/_sprite.scss',
-						}
-					}
-				}
-			}
-		}))
-		.pipe(dest('app/'));
+  return src('app/img/src/**/*.svg')
+    .pipe(svgmin({
+      js2svg: {
+        pretty: true
+      }
+    }))
+    // remove all fill, style and stroke declarations in out shapes
+    .pipe(cheerio({
+      run: function ($) {
+        $('[fill]').removeAttr('fill');
+        $('[stroke]').removeAttr('stroke');
+        $('[style]').removeAttr('style');
+      },
+      parserOptions: {xmlMode: true}
+    }))
+    .pipe(replace('&gt;', '>'))
+    .pipe(svgSprite({
+      mode: {
+        symbol: {
+          sprite: "app/sprite.svg",
+          render: {
+            scss: {
+              dest:'app/sass/_sprite.scss',
+            }
+          }
+        }
+      }
+    }))
+    .pipe(dest('app/'));
 };
 
   exports.browsersync = browsersync;
@@ -180,8 +177,3 @@ function svgSpriteBuil(){
 //       ],
 //     }));
 //   }
-
-
-
-
-

@@ -608,7 +608,7 @@
       grid-template-areas: "A B" "C C";
   justify-items: center;
   -webkit-column-gap: 31px;
-     -moz-column-gap: 31px;
+    -moz-column-gap: 31px;
           column-gap: 31px;
   row-gap: 25px
 }
