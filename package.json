@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "editorconfig": "editorconfig-cli",
+    "eclint": "eclint",
     "stylelint": "stylelint \"app/sass/blocks/*.scss\"",
     "stylelint:fix": "stylelint \"app/sass/blocks/*.scss\" --fix",
     "test": "npm run editorconfig && npm run stylelint && npm run stylelint:fix"
@@ -16,7 +17,9 @@
     "@babel/core": "^7.21.4",
     "@babel/node": "^7.20.7",
     "@babel/preset-env": "^7.21.4",
+    "@htmlacademy/editorconfig-cli": "^1.0.0",
     "browser-sync": "^2.27.x",
+    "editorconfig-cli": "^0.3.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.x",
     "gulp-cheerio": "^1.0.x",
