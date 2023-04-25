@@ -608,7 +608,7 @@
       grid-template-areas: "A B" "C C";
   justify-items: center;
   -webkit-column-gap: 31px;
-    -moz-column-gap: 31px;
+     -moz-column-gap: 31px;
           column-gap: 31px;
   row-gap: 25px
 }
@@ -1197,7 +1197,7 @@
   .information__item {
     font-size: 16px;
     line-height: 24px;
-    font-family: arial;
+    font-family: arial,sans-serif;
     margin-top: 72px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1396,7 +1396,7 @@
   margin: 0;
   font-size: 14px;
   line-height: 20px;
-  font-family: arial
+  font-family: arial,sans-serif
 }
 @media (min-width:768px) {
   .location__text {
@@ -1772,3 +1772,4 @@ li {
 .main-nav__toggle--nojs {
   display: none
 }
+/*# sourceMappingURL=app.min.css.map */
