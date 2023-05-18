@@ -60,7 +60,6 @@ function buildcopy(){
         .pipe(dest("dist"))
 }
 
-<<<<<<< HEAD
 function images(){
     return src("app/img/src/**/*")
 	.pipe(cache(imagemin({
@@ -73,14 +72,6 @@ function images(){
             imagemin.optipng({optimizationLevel: 5})])))
     .pipe(dest("app/img/dest/"))
 }
-=======
-//function images(){
-    //return src("app/img/src/**/*")
-    //.pipe(imagemin())
-  // .pipe(dest("app/img/dest/"))
-
-//}
->>>>>>> cfd6ffd245148ade129ef4cca503847940b499da
 
 function startwatch(){
     watch(["app/**/*.js","!app/**/*.min.js"], scripts);
@@ -178,23 +169,4 @@ function svgSpriteBuil(){
   exports.build = series(cleandist, styles, scripts, buildcopy);
   exports.svgsprite = svgsprite;
   exports.svgspritebuil = svgSpriteBuil;
-<<<<<<< HEAD
   exports.images = images;
-=======
-//exports.images = images;
-//exports.tests = tests;
-
-
-// function testScssLint() {
-//   return src(paths.scss).
-//     pipe(stylelint({
-//       reporters: [
-//         {
-//           failAfterError: true,
-//           formatter: 'string',
-//           console: true,
-//         },
-//       ],
-//     }));
-//   }
->>>>>>> cfd6ffd245148ade129ef4cca503847940b499da
