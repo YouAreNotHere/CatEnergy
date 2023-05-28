@@ -6,23 +6,21 @@ function defaultTask(cb) {
   exports.default = defaultTask
 
 const {src, dest, parallel, series, watch} = require('gulp');
-const browserSync  = require('browser-sync').create();
-const concat       = require('gulp-concat');
-const uglify       = require('gulp-uglify-es').default;
-const sass         = require("gulp-sass")(require('sass'));
+const browserSync = require('browser-sync').create();
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify-es').default;
+const sass = require("gulp-sass")(require('sass'));
 const autoprefixer = require("gulp-autoprefixer");
-const cleanCSS     = require('gulp-clean-css');
-const plumber      = require("gulp-plumber");
-const sourcemap    = require("gulp-sourcemaps");
-const svgSprite    = require('gulp-svg-sprite');
-const svgmin       = require('gulp-svgmin');
-const cheerio      = require('gulp-cheerio');
-const replace      = require('gulp-replace');
+const cleanCSS = require('gulp-clean-css');
+const plumber = require("gulp-plumber");
+const sourcemap = require("gulp-sourcemaps");
+const svgSprite = require('gulp-svg-sprite');
+const svgmin = require('gulp-svgmin');
+const cheerio = require('gulp-cheerio');
+const replace = require('gulp-replace');
 //const runsequence = require("run-sequence");
 //const gwatch = require("gulp-watch");
-const imagemin     = require("gulp-imagemin");
-const pngquant     = require('imagemin-pngquant');
-const cache        = require('gulp-cache');
+//const imagemin = require("gulp-imagemin");
 //import gulp-imagemin from "gulp-imagemin";
 
 let preprocessor = 'sass';
@@ -55,18 +53,12 @@ function buildcopy(){
         .pipe(dest("dist"))
 }
 
-function images(){
-    return src("app/img/src/**/*")
-	.pipe(cache(imagemin({
-			interlaced: true,
-			progressive: true,
-			use: [pngquant()]
-		}
-        [imagemin.gifsicle({interlaced: true}),
-            imagemin.mozjpeg({quality: 75, progressive: true}),
-            imagemin.optipng({optimizationLevel: 5})])))
-    .pipe(dest("app/img/dest/"))
-}
+//function images(){
+    //return src("app/img/src/**/*")
+    //.pipe(imagemin())
+   // .pipe(dest("app/img/dest/"))
+
+//}
 
 function startwatch(){
     watch(["app/**/*.js","!app/**/*.min.js"], scripts);
@@ -167,4 +159,4 @@ function svgSpriteBuil(){
   exports.build = series(cleandist, styles, scripts, buildcopy);
   exports.svgsprite = svgsprite;
   exports.svgspritebuil = svgSpriteBuil;
-  exports.images = images;
+//exports.images = images;
