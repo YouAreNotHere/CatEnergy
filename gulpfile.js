@@ -6,27 +6,24 @@ function defaultTask(cb) {
   exports.default = defaultTask
 
 const {src, dest, parallel, series, watch} = require('gulp');
-const browserSync = require('browser-sync').create();
-const concat = require('gulp-concat');
-const uglify = require('gulp-uglify-es').default;
-const sass = require("gulp-sass")(require('sass'));
+const browserSync  = require('browser-sync').create();
+const concat       = require('gulp-concat');
+const uglify       = require('gulp-uglify-es').default;
+const sass         = require("gulp-sass")(require('sass'));
 const autoprefixer = require("gulp-autoprefixer");
-const cleanCSS = require('gulp-clean-css');
-const plumber = require("gulp-plumber");
-const sourcemap = require("gulp-sourcemaps");
-const svgSprite = require('gulp-svg-sprite');
-const svgmin = require('gulp-svgmin');
-const cheerio = require('gulp-cheerio');
-const replace = require('gulp-replace');
+const cleanCSS     = require('gulp-clean-css');
+const plumber      = require("gulp-plumber");
+const sourcemap    = require("gulp-sourcemaps");
+const svgSprite    = require('gulp-svg-sprite');
+const svgmin       = require('gulp-svgmin');
+const cheerio      = require('gulp-cheerio');
+const replace      = require('gulp-replace');
 //const runsequence = require("run-sequence");
 //const gwatch = require("gulp-watch");
-//const imagemin = require("gulp-imagemin");
+const imagemin     = require("gulp-imagemin");
+const pngquant     = require('imagemin-pngquant');
+const cache        = require('gulp-cache');
 //import gulp-imagemin from "gulp-imagemin";
-//const tests = require ("testScssLint");
-const paths = {
-  scss: './app/sass/blocks/*.scss',
-};
-//const stylelint = require ("stylelint");
 
 let preprocessor = 'sass';
 
@@ -58,12 +55,18 @@ function buildcopy(){
         .pipe(dest("dist"))
 }
 
-//function images(){
-    //return src("app/img/src/**/*")
-    //.pipe(imagemin())
-  // .pipe(dest("app/img/dest/"))
-
-//}
+function images(){
+    return src("app/img/src/**/*")
+	.pipe(cache(imagemin({
+			interlaced: true,
+			progressive: true,
+			use: [pngquant()]
+		}
+        [imagemin.gifsicle({interlaced: true}),
+            imagemin.mozjpeg({quality: 75, progressive: true}),
+            imagemin.optipng({optimizationLevel: 5})])))
+    .pipe(dest("app/img/dest/"))
+}
 
 function startwatch(){
     watch(["app/**/*.js","!app/**/*.min.js"], scripts);
@@ -123,35 +126,38 @@ function svgsprite(){
 }
 
 function svgSpriteBuil(){
-  return src('app/img/src/**/*.svg')
-    .pipe(svgmin({
-      js2svg: {
-        pretty: true
-      }
-    }))
-    // remove all fill, style and stroke declarations in out shapes
-    .pipe(cheerio({
-      run: function ($) {
-        $('[fill]').removeAttr('fill');
-        $('[stroke]').removeAttr('stroke');
-        $('[style]').removeAttr('style');
-      },
-      parserOptions: {xmlMode: true}
-    }))
-    .pipe(replace('&gt;', '>'))
-    .pipe(svgSprite({
-      mode: {
-        symbol: {
-          sprite: "app/sprite.svg",
-          render: {
-            scss: {
-              dest:'app/sass/_sprite.scss',
-            }
-          }
-        }
-      }
-    }))
-    .pipe(dest('app/'));
+	return src('app/img/src/**/*.svg')
+	// minify svg
+		.pipe(svgmin({
+			js2svg: {
+				pretty: true
+			}
+		}))
+		// remove all fill, style and stroke declarations in out shapes
+		.pipe(cheerio({
+			run: function ($) {
+				$('[fill]').removeAttr('fill');
+				$('[stroke]').removeAttr('stroke');
+				$('[style]').removeAttr('style');
+			},
+			parserOptions: {xmlMode: true}
+		}))
+		// cheerio plugin create unnecessary string '&gt;', so replace it.
+		.pipe(replace('&gt;', '>'))
+		// build svg sprite
+		.pipe(svgSprite({
+			mode: {
+				symbol: {
+					sprite: "app/sprite.svg",
+					render: {
+						scss: {
+							dest:'app/sass/_sprite.scss',
+						}
+					}
+				}
+			}
+		}))
+		.pipe(dest('app/'));
 };
 
   exports.browsersync = browsersync;
@@ -161,19 +167,4 @@ function svgSpriteBuil(){
   exports.build = series(cleandist, styles, scripts, buildcopy);
   exports.svgsprite = svgsprite;
   exports.svgspritebuil = svgSpriteBuil;
-//exports.images = images;
-//exports.tests = tests;
-
-
-// function testScssLint() {
-//   return src(paths.scss).
-//     pipe(stylelint({
-//       reporters: [
-//         {
-//           failAfterError: true,
-//           formatter: 'string',
-//           console: true,
-//         },
-//       ],
-//     }));
-//   }
+  exports.images = images;

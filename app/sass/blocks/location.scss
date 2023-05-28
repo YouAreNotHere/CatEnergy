@@ -12,70 +12,70 @@ $pink: #FF8282;
 $darkpink: #D24899;
 
 .location{
-  display: grid;
-  flex-wrap: wrap;
-  margin:0 auto;
-  box-sizing: border-box;
-  width: 100%;
-  position: relative;
+    display: grid;
+    flex-wrap: wrap;
+    margin:0 auto;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
 }
 
 .location iframe{
-  height: 362px;
-
-  @media (min-width: $tablet-width){
-    height: 400px;
-  }
+    height: 362px;
+    
+    @media (min-width: $tablet-width){
+        height: 400px;
+    }
 }
 
 .location-container{
-  width: 87.5%;
-  margin: 0 auto;
-  padding: 28px 0 22px 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  @media (min-width: $tablet-width){
-    width: 81.38%;
+    width: 87.5%;
     margin: 0 auto;
-    margin-top: 99.31px;
-    margin-bottom: 51.27px;
-    padding: 0;
-  }
+    padding: 28px 0 22px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
-  @media (min-width: $desktop-width){
-    width: 39.58vw;
-    margin: 0;
-    padding: 66.31px 82px 51.27px 76px;
-    position: absolute;
-    background-color: white;
-    left: 110px;
-    top: 95px;
-    //Окошко закрывает метку адреса на карте
-  }
+    @media (min-width: $tablet-width){
+        width: 81.38%;
+        margin: 0 auto;
+        margin-top: 99.31px;
+        margin-bottom: 51.27px;
+        padding: 0;
+    }
+
+    @media (min-width: $desktop-width){
+        width: 39.58vw;
+        margin: 0;
+        padding: 66.31px 82px 51.27px 76px;
+        position: absolute;
+        background-color: white;
+        left: 110px;
+        top: 95px;
+        //Окошко закрывает метку адреса на карте
+    }
 
 }
 
 .location__title{
-  margin: 0;
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
+    margin: 0;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
 
-  @media (min-width: $tablet-width){
-    font-size: 20px;
-    line-height: 21px;
-  }
+    @media (min-width: $tablet-width){
+        font-size: 20px;
+        line-height: 21px;
+    }
 }
 
 .location__text{
-  margin: 0;
-  font-size: 14px;
-  line-height: 20px;
-  font-family: arial, sans-serif;
-  @media (min-width: $tablet-width){
-    font-size: 16px;
+    margin: 0;
+    font-size: 14px;
     line-height: 20px;
-    justify-self: end;
-  }
+    font-family: arial;
+    @media (min-width: $tablet-width){
+        font-size: 16px;
+        line-height: 20px;
+        justify-self: end;
+    }
 }

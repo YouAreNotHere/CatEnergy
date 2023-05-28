@@ -9,46 +9,46 @@ $pink: #FF8282;
 $darkpink: #D24899;
 
 @font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: normal;
-  src: local(oswaldmedium),
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: normal;
+    src: local(oswaldmedium),
     url("../../fonts/oswaldregular.woff2") format("woff2"),
     url("../../fonts/oswaldregular.woff") format("woff");
 }
 
 .cart{
-  display: flex;
-  flex-wrap: wrap;
-  margin:0 auto;
-  align-items: flex-start;
-  flex-direction: column;
-
-
-  @media (max-width: $mobile-width-only){
-    height: 480px;
-    width: 100%;
-    color: white;
-  }
-
-  @media (min-width: $tablet-width){
     display: flex;
-    width: 92.18%;
-  }
-  @media (min-width: $desktop-width){
-    display: flex;
-    height: 553px;
-    width: 84.72%;
+    flex-wrap: wrap;
+    margin:0 auto;
+    align-items: flex-start;
     flex-direction: column;
-    margin-top: 80px;
-  }
+    
+
+    @media (max-width: $mobile-width-only){
+        height: 480px;
+        width: 100%;
+        color: white;
+    }
+
+    @media (min-width: $tablet-width){
+        display: flex;
+        width: 92.18%;
+    }
+    @media (min-width: $desktop-width){
+        display: flex;
+        height: 553px;
+        width: 84.72%;
+        flex-direction: column;
+        margin-top: 80px;
+    }
 }
 
 .page-main__title{
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-  @media (max-width: $mobile-width-only){
+    @media (max-width: $mobile-width-only){
     font-size: 36px;
     line-height: 36px;
     margin: 0 auto;
@@ -56,180 +56,182 @@ $darkpink: #D24899;
     font-weight: 400;
     text-align: center;
     width: 78.12%;
-  }
+    }
 
-  @media (min-width: $tablet-width){
-    font-size: 60px;
-    line-height: 60px;
-    width: 420px;
-    font-weight: 400;
-    text-align: left;
-    margin: 0;
-  }
+    @media (min-width: $tablet-width){
+        font-size: 60px;
+        line-height: 60px;
+        width: 420px;
+        font-weight: 400;
+        text-align: left;
+        margin: 0;
+    }
 
-  @media (min-width: $desktop-width){
-    font-size: 60px;
-    line-height: 60px;
-    width: 430px;
-    text-align: left;
-  }
+    @media (min-width: $desktop-width){
+        font-size: 60px;
+        line-height: 60px;
+        width: 430px;
+        text-align: left;
+    }
 }
 
 .cart-container{
-  @media (max-width: $mobile-width-only){
-    background-color: $lightgreen;
-    background-image: url(/../../img/src/cart/index-background-mobile.jpg);
-    background-repeat: no-repeat;
-    color: white;
-    background-position: top;
-    background-size: cover;
-    height: 305px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+    @media (max-width: $mobile-width-only){
+        background-color: $lightgreen;
+        background-image: url(/../../img/src/cart/index-background-mobile.jpg);
+        background-repeat: no-repeat;
+        color: white;
+        background-position: top;
+        background-size: cover;
+        height: 305px;
+        display: flex;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
 
 
-    @media (min-resolution: 2dppx){
-      background-image: url(/../../img/src/cart/index-background-mobile@2x.jpg);
+        @media (min-resolution: 2dppx){
+          background-image: url(/../../img/src/cart/index-background-mobile@2x.jpg);
+        }
     }
-  }
-  @media(min-width: $tablet-width){
-    margin: 0 0 0 87px;
-  }
-  @media (min-width: $desktop-width){
-    margin: 0 0 0 80px;
-    position: relative;
-  }
+    @media(min-width: $tablet-width){
+        margin: 0 0 0 87px;
+    }
+    @media (min-width: $desktop-width){
+        margin: 0 0 0 80px;
+        position: relative;
+    }
 }
 
 .cart-container span{
-  display: flex;
-  text-transform: uppercase;
+    display: flex;
+    text-transform: uppercase;
 
-  @media (max-width: $mobile-width-only){
+        @media (max-width: $mobile-width-only){
     font-size: 14px;
     line-height: 14px;
     margin: 25px 0 29px 0;
     font-weight: 400;
     justify-content: center;
-  }
+    }
 
-  @media (min-width: $tablet-width){
+    @media (min-width: $tablet-width){
     font-size: 20px;
     line-height: 20px;
     margin: 41px 0 49px 0;
     font-weight: 400;
     justify-content: flex-start;
-  }
-  @media (min-width: $tablet-width){
+    }
+    @media (min-width: $tablet-width){
     font-size: 20px;
     line-height: 20px;
     margin: 40px 0 52px 0;
     font-weight: 400;
     justify-content: flex-start;
-  }
+    }
 }
 
 .cart__button{
+    
+    &:hover{
+        background: $darkgreen;
+    }
+    
+    &:active{
+        background: $darkgreen;
+    }
+    
+    color: white;
+    background-color: $lightgreen;
+    display: flex;
+    font-family: Oswald;
+    border: none;
 
-  &:hover{
-    background: $darkgreen;
-  }
-
-  &:active{
-    background: $darkgreen;
-  }
-
-  color: white;
-  background-color: $lightgreen;
-  display: flex;
-  font-family: "Oswald", sans-serif;
-  border: none;
-
-  @media (max-width: $mobile-width-only){
-    font-size: 14px;
-    line-height: 18px;
-    text-transform: uppercase;
-    width: 87.5%;
-    height: 40px;
-    margin: 0 auto;
-    position: absolute;
-    top: 455px;
-    right: 0;
-    left: 0;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  }
-  @media (min-width: $tablet-width){
-    font-size: 20px;
-    text-transform: uppercase;
-    width: 244px;
-    height: 54px;
-    margin: 49px 0 526px 0;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  }
-  @media (min-width: $tablet-width){
-    margin-top: 0;
-  }
+    @media (max-width: $mobile-width-only){
+        font-size: 14px;
+        line-height: 18px;
+        text-transform: uppercase;
+        width: 87.5%;
+        height: 40px;
+        margin: 0 auto;
+        position: absolute;
+        top: 455px;
+        right: 0;
+        left: 0;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    @media (min-width: $tablet-width){
+        font-size: 20px;
+        text-transform: uppercase;
+        width: 244px;
+        height: 54px;
+        margin: 49px 0 526px 0;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    @media (min-width: $tablet-width){
+        margin-top: 0;
+    }
 }
 
 .cart__button span{
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  :hover{
-    opacity: 1;
-  }
-  :active{
-    opacity: 0.3;
-  }
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    :hover{
+        opacity: 1;
+    }
+    :active{
+        opacity: 0.3;
+    }
 }
 
 @media (max-width: $mobile-width-only){
-  .cart-container::before{
-    content: "";
-    width: 280px;
-    height: 270px;
-    position: absolute;
-    top: 187.5px;
-    right: 0;
-    left: 0;
-    margin: 0 auto;
-    z-index: 2;
-    background-image: url(/../../img/src/cart/index-can-mobile%201.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+    .cart-container::before{
+        content: "";
+        width: 280px;
+        height: 270px;
+        position: absolute;
+        top: 187.5px;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        z-index: 2;
+        background-image: url(/../../img/src/cart/index-can-mobile%201.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
 @media (min-width: $tablet-width){
-  .cart-container::before{
-    content: "";
-    width: 709px;
-    height: 609px;
-    position: absolute;
-    top: 342px;
-    left: 90px;
-    z-index: -1;
-    background-image: url(/../../img/src/cart/index-can-tablet-1.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+    .cart-container::before{
+        content: "";
+        width: 709px;
+        height: 609px;
+        position: absolute;
+        top: 342px;
+        left: 90px;
+        z-index: -1;
+        background-image: url(/../../img/src/cart/index-can-tablet-1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
 @media (min-width: $desktop-width){
-  .cart-container::before{
-    content: "";
-    width: 522px;
-    height: 499px;
-    position: absolute;
-    left: 370px;
-    top: -100px;
-    z-index: 2;
-    background-image: url(/../../img/src/cart/index-can.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+    .cart-container::before{
+        content: "";
+        width: 522px;
+        height: 499px;
+        position: absolute;
+        left: 370px;
+        top: -100px;
+        z-index: 2;
+        background-image: url(/../../img/src/cart/index-can.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
+
