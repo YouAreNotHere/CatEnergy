@@ -95,9 +95,10 @@
     background-position: top;
     background-size: cover;
     height: 305px;
-    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
+    display: flex;
+    width: 100%;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -167,7 +168,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: Oswald,sans-serif;
+  font-family: Oswald;
   border: none
 }
 .cart__button:hover {
@@ -325,18 +326,14 @@
   }
 }
 .catalog__picture--slim {
-  position: absolute
-}
-@media (max-width:767px) {
-  .catalog__picture--slim {
-    top: 21px;
-    left: 22px
-  }
+  position: absolute;
+  top: 21px;
+  left: 22px
 }
 @media (min-width:768px) {
   .catalog__picture--slim {
     top: 81px;
-    right: 62px;
+    left: 446px;
     width: 200px;
     height: 211px
   }
@@ -350,18 +347,14 @@
   }
 }
 .catalog__picture--pro {
-  position: absolute
-}
-@media (max-width:767px) {
-  .catalog__picture--pro {
-    top: 24px;
-    left: 13px
-  }
+  position: absolute;
+  top: 24px;
+  left: 13px
 }
 @media (min-width:768px) {
   .catalog__picture--pro {
     top: 91px;
-    right: 28px;
+    left: 412px;
     width: 268px;
     height: 200px
   }
@@ -448,7 +441,7 @@
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
-  font-family: arial,sans-serif;
+  font-family: arial;
   width: 81.07%;
   margin: 0 auto
 }
@@ -587,7 +580,7 @@
 }
 @media (min-width:768px) {
   .example__text {
-    font-family: Arial,sans-serif;
+    font-family: Arial;
     font-size: 16px;
     line-height: 24px;
     margin: 0 0 54px 0
@@ -631,17 +624,6 @@
         grid-template-areas: "A B" "C C";
     gap: 42px;
     row-gap: 0
-  }
-}
-@media (min-width:768px) {
-  .example__resource {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column
   }
 }
 @media (max-width:767px) {
@@ -727,6 +709,17 @@
 @media (min-width:1400px) {
   .example__resource:nth-child(2) span {
     background-color: #f2f2f2
+  }
+}
+@media (min-width:768px) {
+  .example__resource {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column
   }
 }
 .example__resource:nth-child(3) {
@@ -1145,7 +1138,7 @@
 }
 @media (min-width:768px) {
   .information__title {
-    margin: 0 0 72px 0;
+    margin: 0;
     font-size: 60px;
     line-height: 60px;
     font-weight: 400
@@ -1197,7 +1190,7 @@
   .information__item {
     font-size: 16px;
     line-height: 24px;
-    font-family: arial,sans-serif;
+    font-family: arial;
     margin-top: 72px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1272,11 +1265,6 @@
 }
 @media (min-width:768px) {
   .information__item:nth-child(1) {
-    margin: 0 0 85px 0
-  }
-}
-@media (min-width:1440px) {
-  .information__item:nth-child(1) {
     margin: 0
   }
 }
@@ -1289,11 +1277,6 @@
   }
 }
 @media (min-width:768px) {
-  .information__item:nth-child(2) {
-    margin: 0 0 85px 0
-  }
-}
-@media (min-width:1440px) {
   .information__item:nth-child(2) {
     margin: 0
   }
@@ -1396,7 +1379,7 @@
   margin: 0;
   font-size: 14px;
   line-height: 20px;
-  font-family: arial,sans-serif
+  font-family: arial
 }
 @media (min-width:768px) {
   .location__text {
@@ -1470,6 +1453,7 @@
 }
 @media (min-width:1440px) {
   .main-nav {
+    height: 40px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1522,6 +1506,12 @@
     border-width: .5px 0 .5px 0
   }
 }
+.site-list__item a:hover {
+  opacity: .6
+}
+.site-list__item a:active {
+  opacity: .3
+}
 @media (min-width:768px) {
   .site-list__item a {
     color: #000
@@ -1531,12 +1521,6 @@
   .site-list__item a {
     color: #fff
   }
-}
-.site-list__item a:hover {
-  opacity: .6
-}
-.site-list__item a:active {
-  opacity: .3
 }
 .main-nav--nojs {
   display: -webkit-box;
@@ -1772,4 +1756,3 @@ li {
 .main-nav__toggle--nojs {
   display: none
 }
-/*# sourceMappingURL=app.min.css.map */

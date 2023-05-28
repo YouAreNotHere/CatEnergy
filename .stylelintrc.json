@@ -1,8 +1,0 @@
-{
-  "extends": "stylelint-config-recommended-scss",
-
-  "rules": {
-    "declaration-no-important": true,
-    "indentation": [2, {"ignore": ["inside-parens"]}]
-  }
-}
