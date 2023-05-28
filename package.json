@@ -21,24 +21,6 @@
     "browser-sync": "^2.27.x",
     "editorconfig-cli": "^0.3.0",
     "gulp": "^4.0.2",
-<<<<<<< HEAD
-    "gulp-autoprefixer": "^8.0.0",
-    "gulp-cache": "^1.1.3",
-    "gulp-cheerio": "^1.0.0",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-plumber": "^1.2.1",
-    "gulp-replace": "^1.1.4",
-    "gulp-sass": "^5.1.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "gulp-svg-sprite": "^2.0.3",
-    "gulp-svgmin": "^4.1.0",
-    "gulp-uglify-es": "^3.0.0",
-    "gulp-watch": "^5.0.1",
-    "imagemin-pngquant": "^9.0.2",
-    "sass": "^1.58.3"
-=======
     "gulp-autoprefixer": "^8.0.x",
     "gulp-cheerio": "^1.0.x",
     "gulp-clean-css": "^4.3.x",
@@ -56,7 +38,6 @@
     "stylelint": "^15.4.0",
     "stylelint-config-recommended-scss": "^10.0.0",
     "stylelint-scss": "^4.6.0"
->>>>>>> cfd6ffd245148ade129ef4cca503847940b499da
   },
   "editorconfig-cli": [
     "*.json",
