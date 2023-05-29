@@ -21,6 +21,7 @@ const replace      = require('gulp-replace');
 //const runsequence = require("run-sequence");
 //const gwatch = require("gulp-watch");
 const imagemin     = require("gulp-imagemin");
+const imageminMozjpeg = require('imagemin-mozjpeg');
 const pngquant     = require('imagemin-pngquant');
 const cache        = require('gulp-cache');
 //import gulp-imagemin from "gulp-imagemin";
@@ -60,18 +61,49 @@ function buildcopy(){
         .pipe(dest("dist"))
 }
 
+// function images(){
+//     return src("app/img/src/**/*")
+// 	.pipe(cache(imagemin({
+// 			interlaced: true,
+// 			progressive: true,
+// 			use: [pngquant()]
+// 		}
+//         [imagemin.gifsicle({interlaced: true}),
+//             imagemin.mozjpeg({quality: 10, progressive: true}),
+//             imagemin.optipng({optimizationLevel: 5})])))
+//     .pipe(dest("app/img/dest/"))
+// }
+
+// function imagesMozjpeg(){
+//   return src("app/img/src/**/*")
+//   .pipe(imagemin([imageminMozjpeg({
+//     quality: 15
+// })]))
+// .pipe(dest('app/img/dest/'));
+// }
+
 function images(){
-    return src("app/img/src/**/*")
-	.pipe(cache(imagemin({
-			interlaced: true,
-			progressive: true,
-			use: [pngquant()]
-		}
-        [imagemin.gifsicle({interlaced: true}),
-            imagemin.mozjpeg({quality: 75, progressive: true}),
-            imagemin.optipng({optimizationLevel: 5})])))
-    .pipe(dest("app/img/dest/"))
+  return src('app/img/src/**/*')
+    .pipe(
+      cache(
+        imagemin([
+          imagemin.gifsicle({interlaced: true}),
+          imagemin.mozjpeg({quality: 10, progressive: true}),
+          imagemin.optipng({optimizationLevel: 18}),
+          //imagemin.jpegtran({progressive: true}),
+        ]),
+      ),
+    )
+    .pipe(dest('app/img/dest/'));
 }
+
+// function images(){
+//   return src('app/img/src/**/*')
+// .pipe(imagemin([imageminMozjpeg({
+//   quality: 65
+// })]))
+// .pipe(dest('app/img/dest/'));
+// }
 
 function startwatch(){
     watch(["app/**/*.js","!app/**/*.min.js"], scripts);
@@ -170,3 +202,4 @@ function svgSpriteBuil(){
   exports.svgsprite = svgsprite;
   exports.svgspritebuil = svgSpriteBuil;
   exports.images = images;
+ //exports.imagesmozjpeg = imagesMozjpeg;
