@@ -18,19 +18,19 @@ const svgSprite    = require('gulp-svg-sprite');
 const svgmin       = require('gulp-svgmin');
 const cheerio      = require('gulp-cheerio');
 const replace      = require('gulp-replace');
-//const runsequence = require("run-sequence");
-//const gwatch = require("gulp-watch");
+const webp         = require("gulp-webp")
 const imagemin     = require("gulp-imagemin");
 const imageminMozjpeg = require('imagemin-mozjpeg');
 const pngquant     = require('imagemin-pngquant');
 const cache        = require('gulp-cache');
-//import gulp-imagemin from "gulp-imagemin";
-//const tests = require ("testScssLint");
 const paths = {
   scss: './app/sass/blocks/*.scss',
 };
 //const stylelint = require ("stylelint");
-
+//import gulp-imagemin from "gulp-imagemin";
+//const tests = require ("testScssLint");
+//const runsequence = require("run-sequence");
+//const gwatch = require("gulp-watch");
 let preprocessor = 'sass';
 
 function browsersync(){
@@ -61,27 +61,6 @@ function buildcopy(){
         .pipe(dest("dist"))
 }
 
-// function images(){
-//     return src("app/img/src/**/*")
-// 	.pipe(cache(imagemin({
-// 			interlaced: true,
-// 			progressive: true,
-// 			use: [pngquant()]
-// 		}
-//         [imagemin.gifsicle({interlaced: true}),
-//             imagemin.mozjpeg({quality: 10, progressive: true}),
-//             imagemin.optipng({optimizationLevel: 5})])))
-//     .pipe(dest("app/img/dest/"))
-// }
-
-// function imagesMozjpeg(){
-//   return src("app/img/src/**/*")
-//   .pipe(imagemin([imageminMozjpeg({
-//     quality: 15
-// })]))
-// .pipe(dest('app/img/dest/'));
-// }
-
 function images(){
   return src('app/img/src/**/*')
     .pipe(
@@ -94,16 +73,14 @@ function images(){
         ]),
       ),
     )
-    .pipe(dest('app/img/dest/'));
+    .pipe(dest('app/img/dest/'))
 }
 
-// function images(){
-//   return src('app/img/src/**/*')
-// .pipe(imagemin([imageminMozjpeg({
-//   quality: 65
-// })]))
-// .pipe(dest('app/img/dest/'));
-// }
+function webp(){
+  return src('app/img/src/**/*')
+  .pipe(webp({quality:90}))
+  .pipe(dest('app/img/dest/'))
+}
 
 function startwatch(){
     watch(["app/**/*.js","!app/**/*.min.js"], scripts);
@@ -202,4 +179,35 @@ function svgSpriteBuil(){
   exports.svgsprite = svgsprite;
   exports.svgspritebuil = svgSpriteBuil;
   exports.images = images;
+  exports.webp = webp;
  //exports.imagesmozjpeg = imagesMozjpeg;
+
+
+ // function images(){
+//   return src('app/img/src/**/*')
+// .pipe(imagemin([imageminMozjpeg({
+//   quality: 65
+// })]))
+// .pipe(dest('app/img/dest/'));
+// }
+
+// function images(){
+//     return src("app/img/src/**/*")
+// 	.pipe(cache(imagemin({
+// 			interlaced: true,
+// 			progressive: true,
+// 			use: [pngquant()]
+// 		}
+//         [imagemin.gifsicle({interlaced: true}),
+//             imagemin.mozjpeg({quality: 10, progressive: true}),
+//             imagemin.optipng({optimizationLevel: 5})])))
+//     .pipe(dest("app/img/dest/"))
+// }
+
+// function imagesMozjpeg(){
+//   return src("app/img/src/**/*")
+//   .pipe(imagemin([imageminMozjpeg({
+//     quality: 15
+// })]))
+// .pipe(dest('app/img/dest/'));
+// }
