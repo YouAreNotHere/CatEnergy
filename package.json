@@ -35,6 +35,7 @@
     "gulp-svgmin": "^4.1.x",
     "gulp-uglify-es": "^3.0.x",
     "gulp-watch": "^5.0.x",
+    "gulp-webp": "^4.0.1",
     "imagemin-mozjpeg": "^5.1.0",
     "imagemin-pngquant": "^9.0.2",
     "sass": "^1.58.x",
