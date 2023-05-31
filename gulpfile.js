@@ -76,9 +76,9 @@ function images(){
     .pipe(dest('app/img/dest/'))
 }
 
-function webp(){
+function weBp(){
   return src('app/img/src/**/*')
-  .pipe(webp({quality:90}))
+  .pipe(webp({quality:80}))
   .pipe(dest('app/img/dest/'))
 }
 
@@ -179,7 +179,7 @@ function svgSpriteBuil(){
   exports.svgsprite = svgsprite;
   exports.svgspritebuil = svgSpriteBuil;
   exports.images = images;
-  exports.webp = webp;
+  exports.webp = weBp;
  //exports.imagesmozjpeg = imagesMozjpeg;
 
 
