@@ -23,6 +23,7 @@ const imagemin     = require("gulp-imagemin");
 const imageminMozjpeg = require('imagemin-mozjpeg');
 const pngquant     = require('imagemin-pngquant');
 const cache        = require('gulp-cache');
+const htmlmin      = require('gulp-htmlmin');
 const paths = {
   scss: './app/sass/blocks/*.scss',
 };
@@ -171,15 +172,23 @@ function svgSpriteBuil(){
     .pipe(dest('app/'));
 };
 
-  exports.browsersync = browsersync;
-  exports.scripts = scripts;
-  exports.default = parallel(scripts,styles, browsersync, startwatch);
-  exports.styles = styles;
-  exports.build = series(cleandist, styles, scripts, buildcopy);
-  exports.svgsprite = svgsprite;
+function minify(){
+  return src('app/*.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(dest('app/dist'));
+};
+
+  exports.browsersync   = browsersync;
+  exports.scripts       = scripts;
+  exports.default       = parallel(scripts,styles, browsersync, startwatch);
+  exports.styles        = styles;
+  exports.build         = series(cleandist, styles, scripts, buildcopy);
+  exports.svgsprite     = svgsprite;
   exports.svgspritebuil = svgSpriteBuil;
-  exports.images = images;
-  exports.webp = weBp;
+  exports.images        = images;
+  exports.webp          = weBp;
+  exports.minify        =minify;
+
  //exports.imagesmozjpeg = imagesMozjpeg;
 
 
