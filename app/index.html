@@ -7,16 +7,16 @@
       <link href="css/normalize.css" rel="stylesheet">
       <link rel ="preload" href="css/app.min.css" as="style">
       <link href="css/app.min.css" rel="stylesheet">
-      <link rel ="preload" href="../../fonts/oswaldregular.woff2" as="font">
+      <link rel ="preload" href="../../fonts/oswaldregular.woff2" as="font" crossorigin>
   </head>
   <body class="page__body">
     <header class="page-header">
       <div class="page-header__container">
       <a href="index.html" class="page-header__logo">
         <picture>
-          <source media="(min-width:1400px)" srcset="/../../img/src/header/logo-desktop.svg" width="202px" height="59px">
-          <source media="(min-width:768px)" srcset="/../../img/src/header/logo-tablet.svg" width="174px" height="52px">
-          <img src="/../../img/src/header/logo-mobile.svg" class="logo-img" alt="Cat Energy" width="34" height="38">
+          <source media="(min-width:1400px)" srcset="/../../img/dest/header/logo-desktop.svg" width="202px" height="59px">
+          <source media="(min-width:768px)" srcset="/../../img/dest/header/logo-tablet.svg" width="174px" height="52px">
+          <img src="/../../img/dest/header/logo-mobile.svg" class="logo-img" alt="Cat Energy" width="34" height="38">
         </picture>
       </a>
       <a href="index.html" class="page-header__logo-text" aria-label="Главная страница">
@@ -59,6 +59,25 @@
           </h1>
           <span>Занялся собой? Займись котом!
           </span>
+          <picture>
+            <source
+            type="image/webp"
+            media="(min-width:768px)"
+            srcset="/../../img/dest/cart/index-can-tablet@1x.webp 1x, /../../img/dest/cart/index-can-tablet@2x.webp 2x"
+            width="709px" height="609px">
+            <source
+            media="(min-width:768px)"
+            srcset="/../../img/dest/cart/index-can-tablet@1x.png 1x, /../../img/dest/cart/index-can-tablet@2x.png 2x"
+            width="709px" height="609px">
+            <source
+            type="image/webp"
+            srcset="/../../img/dest/cart/index-can-mobile@1x.webp 1x, /../../img/dest/cart/index-can-mobile@2x.webp 2x"
+            width="311px" height="232px">
+            <img class="example__image"
+            src="/../../img/dest/cart/index-can-mobile@1x.png"
+            srcset="/../../img/dest/cart/index-can-mobile@2x.png 2x"
+            class="logo-img" alt="Пример кота до похудения" width="280px" height="259px">
+            </picture>
           <button class="cart__button" type="button">
             <span>Подобрать программу</span>
           </button>
@@ -180,27 +199,59 @@
             </ul>
             <div class="example__images">
             <picture>
-              <source media="(min-width:1440px)"
-              srcset="/../../img/src/example/before-desktop@1x.png 1x, /../../img/src/example/before-desktop@2x.png 2x"
+              <source
+              type="image/webp"
+              media="(min-width:1440px)"
+              srcset="/../../img/dest/example/before-desktop@1x.webp 1x, /../../img/dest/example/before-desktop@2x.webp 2x"
               width="730px" height="536px">
-              <source media="(min-width:768px)"
-              srcset="/../../img/src/example/before-tablet@1x.png 1x, /../../img/src/example/before-tablet@2x.png 2x"
+              <source
+              media="(min-width:1440px)"
+              srcset="/../../img/dest/example/before-desktop@1x.png 1x, /../../img/dest/example/before-desktop@2x.png 2x"
+              width="730px" height="536px">
+              <source
+              type="image/webp"
+              media="(min-width:768px)"
+              srcset="/../../img/dest/example/before-tablet@1x.webp 1x, /../../img/dest/example/before-tablet@2x.webp 2x"
               width="708px" height="620px">
+              <source
+              media="(min-width:768px)"
+              srcset="/../../img/dest/example/before-tablet@1x.png 1x, /../../img/dest/example/before-tablet@2x.png 2x"
+              width="708px" height="620px">
+              <source
+              srcset="/../../img/dest/example/before-mobile@1x.webp 1x, /../../img/dest/example/before-mobile@2x.webp 2x"
+              width="311px" height="232px">
               <img class="example__image"
-              src="/../../img/src/example/before-mobile@1x.png"
-              srcset="/../../img/src/example/before-mobile@2x.png 2x"
+              src="/../../img/dest/example/before-mobile@1x.png"
+              srcset="/../../img/dest/example/before-mobile@2x.png 2x"
               class="logo-img" alt="Пример кота до похудения" width="311px" height="232px">
             </picture>
             <picture>
-              <source media="(min-width:1440px)"
-              srcset="/../../img/src/example/after-desktop@1x.png 1x, /../../img/src/example/after-desktop@2x.png 2x"
+              <source
+              type="image/webp"
+              media="(min-width:1440px)"
+              srcset="/../../img/dest/example/after-desktop@1x.webp 1x, /../../img/dest/example/after-desktop@2x.webp 2x"
               width="730px" height="536px">
-              <source media="(min-width:768px)"
-              srcset="/../../img/src/example/after-tablet@1x.png 1x, /../../img/src/example/after-tablet@2x.png 2x"
+              <source
+              media="(min-width:1440px)"
+              srcset="/../../img/dest/example/after-desktop@1x.png 1x, /../../img/dest/example/after-desktop@2x.png 2x"
+              width="730px" height="536px">
+              <source
+              type="image/webp"
+              media="(min-width:768px)"
+              srcset="/../../img/dest/example/after-tablet@1x.webp 1x, /../../img/dest/example/after-tablet@2x.webp 2x"
               width="708px" height="620px">
-              <img class="example__image"
-              src="/../../img/src/example/after-mobile@1x.png"
-              srcset="/../../img/src/example/after-mobile@2x.png 2x"
+              <source
+              media="(min-width:768px)"
+              srcset="/../../img/dest/example/after-tablet@1x.png 1x, /../../img/dest/example/after-tablet@2x.png 2x"
+              width="708px" height="620px">
+              <source
+              type="image/webp"
+              srcset="/../../img/dest/example/after-mobile@1x.webp, /../../img/dest/example/after-mobile@2x.png 2x"
+              width="311px" height="232px">
+              <img
+              class="example__image"
+              src="/../../img/dest/example/after-mobile@1x.png"
+              srcset="/../../img/dest/example/after-mobile@2x.png 2x"
               class="logo-img" alt="Пример кота после похудения" width="311px" height="232px">
             </picture>
             </div>
