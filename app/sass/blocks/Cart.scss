@@ -52,7 +52,7 @@ $darkpink: #D24899;
     font-size: 36px;
     line-height: 36px;
     margin: 0 auto;
-    margin-top: 27px;
+    margin-top: 54px;
     font-weight: 400;
     text-align: center;
     width: 78.12%;
@@ -110,7 +110,7 @@ $darkpink: #D24899;
   @media (max-width: $mobile-width-only){
     font-size: 14px;
     line-height: 14px;
-    margin: 25px 0 29px 0;
+    margin: 24px 0 28px 0;
     font-weight: 400;
     justify-content: center;
   }
@@ -125,7 +125,7 @@ $darkpink: #D24899;
   @media (min-width: $tablet-width){
     font-size: 20px;
     line-height: 20px;
-    margin: 40px 0 52px 0;
+    margin: 40px 0 21px 0;
     font-weight: 400;
     justify-content: flex-start;
   }
@@ -167,10 +167,12 @@ $darkpink: #D24899;
     text-transform: uppercase;
     width: 244px;
     height: 54px;
-    margin: 49px 0 526px 0;
+    margin: 0px 0 0px 0;
     text-align: center;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 370px;
   }
   @media (min-width: $tablet-width){
     margin-top: 0;
@@ -200,7 +202,6 @@ $darkpink: #D24899;
     left: 0;
     margin: 0 auto;
     z-index: 2;
-    background-image: url(/../../img/src/cart/index-can-mobile%201.png);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -214,7 +215,6 @@ $darkpink: #D24899;
     top: 342px;
     left: 90px;
     z-index: -1;
-    background-image: url(/../../img/src/cart/index-can-tablet-1.png);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -228,8 +228,23 @@ $darkpink: #D24899;
     left: 370px;
     top: -100px;
     z-index: 2;
-    background-image: url(/../../img/src/cart/index-can.png);
     background-repeat: no-repeat;
     background-size: cover;
+  }
+}
+
+.cart__image{
+  width: 280px;
+  height: 258px;
+  margin: 0 auto;
+  border-style: inset;
+  border-width: 1px;
+  border-color: black;
+
+  @media (min-width: $tablet-width){
+    width: 709px;
+    height: 609px;
+    border: 0;
+    background-color:transparent;
   }
 }
