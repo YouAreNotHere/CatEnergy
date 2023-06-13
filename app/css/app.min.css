@@ -62,7 +62,7 @@
     font-size: 36px;
     line-height: 36px;
     margin: 0 auto;
-    margin-top: 27px;
+    margin-top: 54px;
     font-weight: 400;
     text-align: center;
     width: 78.12%
@@ -132,7 +132,7 @@
   .cart-container span {
     font-size: 14px;
     line-height: 14px;
-    margin: 25px 0 29px 0;
+    margin: 24px 0 28px 0;
     font-weight: 400;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -154,7 +154,7 @@
   .cart-container span {
     font-size: 20px;
     line-height: 20px;
-    margin: 40px 0 52px 0;
+    margin: 40px 0 21px 0;
     font-weight: 400;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -203,14 +203,16 @@
     text-transform: uppercase;
     width: 244px;
     height: 54px;
-    margin: 49px 0 526px 0;
+    margin: 0;
     text-align: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center
+            align-items: center;
+    position: absolute;
+    top: 370px
   }
 }
 @media (min-width:768px) {
@@ -244,7 +246,6 @@
     left: 0;
     margin: 0 auto;
     z-index: 2;
-    background-image: url(/../../img/src/cart/index-can-mobile%201.png);
     background-repeat: no-repeat;
     background-size: cover
   }
@@ -258,7 +259,6 @@
     top: 342px;
     left: 90px;
     z-index: -1;
-    background-image: url(/../../img/src/cart/index-can-tablet-1.png);
     background-repeat: no-repeat;
     background-size: cover
   }
@@ -272,9 +272,24 @@
     left: 370px;
     top: -100px;
     z-index: 2;
-    background-image: url(/../../img/src/cart/index-can.png);
     background-repeat: no-repeat;
     background-size: cover
+  }
+}
+.cart__image {
+  width: 280px;
+  height: 258px;
+  margin: 0 auto;
+  border-style: inset;
+  border-width: 1px;
+  border-color: #000
+}
+@media (min-width:768px) {
+  .cart__image {
+    width: 709px;
+    height: 609px;
+    border: 0;
+    background-color: transparent
   }
 }
 .catalog {
