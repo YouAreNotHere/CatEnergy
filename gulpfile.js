@@ -220,21 +220,4 @@ function minify(){
 // })]))
 // .pipe(dest('app/img/dest/'));
 // }
-<picture>
-<source
-type="image/webp"
-media="(min-width:768px)"
-srcset="/../../img/dest/cart/index-can-tablet@1x.webp 1x, /../../img/dest/cart/index-can-tablet@2x.webp 2x"
-width="709px" height="609px">
-<source
-media="(min-width:768px)"
-srcset="/../../img/dest/cart/index-can-tablet@1x.png 1x, /../../img/dest/cart/index-can-tablet@2x.png 2x"
-width="709px" height="609px">
-<source
-srcset="/../../img/dest/cart/index-can-tabletmobile@1x.webp 1x, /../../img/dest/cart/before-mobile@2x.webp 2x"
-width="311px" height="232px">
-<img class="example__image"
-src="/../../img/dest/cart/before-mobile@1x.png"
-srcset="/../../img/dest/cart/before-mobile@2x.png 2x"
-class="logo-img" alt="Пример кота до похудения" width="311px" height="232px">
-</picture>
+
