@@ -189,6 +189,10 @@ $darkpink: #D24899;
   position: relative;
   text-transform: uppercase;
 
+  &:active{
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 20px;
     margin: 0 0 53px 0;

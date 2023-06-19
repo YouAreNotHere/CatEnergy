@@ -40,7 +40,7 @@ $darkpink: #D24899;
     height: 553px;
     width: 84.72%;
     flex-direction: column;
-    margin-top: 80px;
+    margin-bottom: 90px;
   }
 }
 
@@ -99,7 +99,6 @@ $darkpink: #D24899;
   }
   @media (min-width: $desktop-width){
     margin: 0 0 0 80px;
-    position: relative;
   }
 }
 
@@ -173,9 +172,10 @@ $darkpink: #D24899;
     align-items: center;
     position: absolute;
     top: 370px;
+    margin-top: 0;
   }
   @media (min-width: $tablet-width){
-    margin-top: 0;
+    top: 447px;
   }
 }
 
@@ -246,5 +246,13 @@ $darkpink: #D24899;
     height: 609px;
     border: 0;
     background-color:transparent;
+  }
+
+  @media (min-width: $desktop-width){
+    position: absolute;
+    top: 62px;
+    left: 280px;
+    width: 552px;
+    height: 499px;
   }
 }
