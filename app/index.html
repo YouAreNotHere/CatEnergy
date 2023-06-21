@@ -12,22 +12,26 @@
   <body class="page__body">
     <header class="page-header">
       <div class="page-header__container">
-      <a href="index.html" class="page-header__logo">
-        <picture>
-          <source media="(min-width:1400px)" srcset="/../../img/dest/header/logo-desktop.svg" width="202px" height="59px">
-          <source media="(min-width:768px)" srcset="/../../img/dest/header/logo-tablet.svg" width="174px" height="52px">
-          <img src="/../../img/dest/header/logo-mobile.svg" class="logo-img" alt="Cat Energy" width="34" height="38">
-        </picture>
-      </a>
-      <a href="index.html" class="page-header__logo-text" aria-label="Главная страница">
-        <svg class="logo-text" alt="" width="101" height="18" viewBox="0 0 101 18" fill="#111111" role="img"
-        xmlns="http://www.w3.org/2000/svg">
-          <use xlink:href="sprite.svg#header--logo-text"></use>
-        </svg>
-      </a>
-        <button class="main-nav__toggle main-nav__toggle--closed main-nav__toggle--nojs" type="button">
-          <span class="visually-hidden"></span>
-        </button>
+        <div class="page-header__wrapper">
+          <a href="index.html" class="page-header__logo">
+            <picture>
+              <source media="(min-width:1400px)" srcset="/../../img/dest/header/logo-desktop.svg" width="202px" height="59px">
+              <source media="(min-width:768px)" srcset="/../../img/dest/header/logo-tablet.svg" width="174px" height="52px">
+              <img src="/../../img/dest/header/logo-mobile.svg" class="logo-img" alt="Cat Energy" width="34" height="38">
+            </picture>
+          </a>
+          <a href="index.html" class="page-header__logo-text" aria-label="Главная страница">
+            <svg class="logo-text" alt="" width="101" height="18" viewBox="0 0 101 18" fill="#111111" role="img"
+            xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="sprite.svg#header--logo-text"></use>
+          </svg>
+          </a>
+        </div>
+
+          <button class="main-nav__toggle main-nav__toggle--closed main-nav__toggle--nojs" type="button">
+            <span class="visually-hidden"></span>
+          </button>
+
       </div>
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__wrapper">
