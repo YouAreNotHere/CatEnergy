@@ -54,6 +54,7 @@
     "app/sass/**/*.scss"
   ],
   "dependencies": {
+    "gulp-gh-pages": "^0.5.4",
     "html": "^1.0.0"
   }
 }
