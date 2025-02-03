@@ -166,7 +166,8 @@ function svgSpriteBuil(){
   exports.scripts = scripts;
   exports.default = parallel(scripts,styles, browsersync, startwatch);
   exports.styles = styles;
-  exports.build = series(cleandist, styles, scripts, buildcopy);
+  // exports.build = series(cleandist, styles, scripts, buildcopy);
+  exports.build = series(styles, scripts, buildcopy);
   exports.svgsprite = svgsprite;
   exports.svgspritebuil = svgSpriteBuil;
   exports.images = images;
