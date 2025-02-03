@@ -2,7 +2,7 @@
   font-family: Oswald;
   font-style: normal;
   font-weight: 400;
-  src: local(oswaldmedium),url(../../fonts/oswaldregular.woff2) format("woff2"),url(../../fonts/oswaldregular.woff) format("woff")
+  src: local(oswaldmedium),url(../fonts/oswaldregular.woff2) format("woff2"),url(../fonts/oswaldregular.woff) format("woff")
 }
 .cart {
   display: -webkit-box;
@@ -89,7 +89,7 @@
 @media (max-width:767px) {
   .cart-container {
     background-color: #68b738;
-    background-image: url(/../../img/src/cart/index-background-mobile.jpg);
+    background-image: url(../img/src/cart/index-background-mobile.jpg);
     background-repeat: no-repeat;
     color: #fff;
     background-position: top;
@@ -108,7 +108,7 @@
 }
 @media (max-width:767px) and (-webkit-min-device-pixel-ratio:2), (max-width:767px) and (-o-min-device-pixel-ratio:2/1), (max-width:767px) and (min-resolution:2dppx) {
   .cart-container {
-    background-image: url(/../../img/src/cart/index-background-mobile@2x.jpg)
+    background-image: url(../img/src/cart/index-background-mobile@2x.jpg)
   }
 }
 @media (min-width:768px) {
@@ -542,7 +542,7 @@
   content: "";
   width: 32px;
   height: 10px;
-  background-image: url(/../../img/src/catalog/icon_arrow.svg);
+  background-image: url(../img/src/catalog/icon_arrow.svg);
   z-index: 2;
   position: absolute;
   top: 3.5px;
@@ -1294,7 +1294,7 @@
 }
 @media (min-width:768px) {
   .information__item:nth-child(1)::after {
-    background-image: url(/../../img/src/information/1.png)
+    background-image: url(../img/src/information/1.png)
   }
 }
 @media (min-width:768px) {
@@ -1309,7 +1309,7 @@
 }
 @media (min-width:768px) {
   .information__item:nth-child(2)::after {
-    background-image: url(/../../img/src/information/2.png);
+    background-image: url(../img/src/information/2.png);
     height: 220px;
     width: 134px;
     bottom: -45px
@@ -1337,7 +1337,7 @@
 }
 @media (min-width:768px) {
   .information__item:nth-child(3)::after {
-    background-image: url(/../../img/src/information/3.png);
+    background-image: url(../img/src/information/3.png);
     height: 220px;
     width: 140px
   }
@@ -1354,7 +1354,7 @@
 }
 @media (min-width:768px) {
   .information__item:nth-child(4)::after {
-    background-image: url(/../../img/src/information/4.png);
+    background-image: url(../img/src/information/4.png);
     height: 220px;
     width: 120px
   }
@@ -1437,7 +1437,7 @@
   font-family: Oswald;
   font-style: normal;
   font-weight: 400;
-  src: local(oswaldmedium),url(../../fonts/oswaldregular.woff2) format("woff2"),url(../../fonts/oswaldregular.woff) format("woff")
+  src: local(oswaldmedium),url(../fonts/oswaldregular.woff2) format("woff2"),url(../fonts/oswaldregular.woff) format("woff")
 }
 .main-nav {
   text-align: center;
@@ -1507,7 +1507,7 @@
     margin-left: 0;
     margin-top: 0;
     padding-top: 71px;
-    background-image: url(/../../img/src/nav/index-background-desktop.jpg);
+    background-image: url(../img/src/nav/index-background-desktop.jpg);
     background-repeat: no-repeat;
     background-size: cover
   }
@@ -1575,7 +1575,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local(oswaldmedium),url(../../fonts/oswaldregular.woff2) format("woff2"),url(../../fonts/oswaldregular.woff) format("woff")
+  src: local(oswaldmedium),url(../fonts/oswaldregular.woff2) format("woff2"),url(../fonts/oswaldregular.woff) format("woff")
 }
 .page {
   height: 100%;
