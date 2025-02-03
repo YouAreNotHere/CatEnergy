@@ -24,8 +24,14 @@ const imageminMozjpeg = require('imagemin-mozjpeg');
 const pngquant     = require('imagemin-pngquant');
 const cache        = require('gulp-cache');
 const htmlmin      = require('gulp-htmlmin');
+const ghPages = require('gulp-gh-pages');
 const paths = {
   scss: './app/sass/blocks/*.scss',
+};
+
+function deploy () {
+  return src('dist/**/*')
+    .pipe(ghPages());
 };
 //const stylelint = require ("stylelint");
 //import gulp-imagemin from "gulp-imagemin";
